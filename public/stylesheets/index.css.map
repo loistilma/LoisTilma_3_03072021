@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAAA,sBAAsB;ACAtB,AAAA,CAAC,CAAC;EACE,KAAK,EAAE,OAAO;CACjB;;ADED,AAAA,IAAI,CAAC;EACD,IAAI,EAAE,kDAAkD;CAC3D;;AAED,AAAA,GAAG,CAAC;EACA,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "../../src/scss/index.scss",
+        "../../src/scss/_colors.scss",
+        "../../src/scss/_forms.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

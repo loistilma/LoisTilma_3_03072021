@@ -1,0 +1,66 @@
+extends layout
+
+block content
+  div
+    span(class='fas fa-map-marker-alt') Paris, Belleville
+  div
+    h2 Réservez le menu qui vous convient
+    p Découvrez des restaurants d'exception, séléctionnés par nos soins.
+    button Explorez nos restaurants
+  main
+    section
+      h2 Fonctionnement
+      ol
+        li
+          span(class='fas fa-mobile-alt')
+          a(href='#') Choissisez un restaurant
+        li
+          span(class='fas fa-list-ul')
+          a(href='#') Composez votre menu
+        li
+          span(class='fas fa-store')
+          a(href='#') Dégustez au restaurant
+    section
+      h2 Restaurants 
+      div
+        a(href='/la-palette-du-gout')
+          figure
+            div
+              img(src='/images/restaurants/la-palette-du-gout.jpg', alt='La palette du goût')
+              span Nouveau
+            figcaption
+              p La palette du goût
+              p Ménilmontant
+        input(type='checkbox', id='like-1')
+        label(for='like-1', class='fas far fa-heart')
+      div
+        a(href='/la-note-enchantee')
+          figure
+            div
+              img(src='/images/restaurants/la-note-enchantee.jpg', alt='La note enchantée')
+              span Nouveau
+            figcaption
+              p La note enchantée
+              p Charonne
+        input(type='checkbox', id='like-2')
+        label(for='like-2', class='fas far fa-heart')
+      div
+        a(href='/a-la-francaise')
+          figure
+            div
+              img(src='/images/restaurants/a-la-francaise.jpg', alt='À la française')
+            figcaption
+              p À la française
+              p Cité Rouge
+        input(type='checkbox', id='like-3')
+        label(for='like-3', class='fas far fa-heart')
+      div
+        a(href='/le-delice-des-sens')
+          figure
+            div
+              img(src='/images/restaurants/le-delice-des-sens.jpg', alt='Le délice des sens')
+            figcaption
+              p Le délice des sens
+              p Folie-Méricourt
+        input(type='checkbox', id='like-4')
+        label(for='like-4', class='fas far fa-heart')

@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    div
+        img(src= restaurant.imgUrl, alt=restaurant.title)
+    section
+        h2= restaurant.title
+            span(class='fas far fa-heart')
+        h3 ENTRÉES
+        div
+          each val in restaurant.starter
+            ul
+                li= val.name
+                li= val.desc
+                li= val.price
+        h3 PLATS
+        div
+          each val in restaurant.main
+            ul
+                li= val.name
+                li= val.desc
+                li= val.price
+        h3 DESSERTS
+        div
+          each val in restaurant.dessert
+            ul
+                li= val.name
+                li= val.desc
+                li= val.price
+
+        button Commander
