@@ -1,0 +1,23 @@
+@import '../utilities/icons';
+@import '../utilities/colors';
+
+.place {
+    padding: 17px;
+    color: $light-black;
+    background: #eaeaea;
+
+    &__title {
+        display: block;     
+        text-align: center;
+        position: relative;
+        font-size: 0.96em;
+        font-weight: 500;
+    }
+
+    &__icon::before {
+        /* fa-map-marker-alt */
+        @include content-icon(900, $light-black, 1em, "\f3c5", -250%);
+        position: absolute;
+    }
+
+}

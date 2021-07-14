@@ -1,0 +1,5 @@
+@import '../components/buttons';
+
+.desc__btn {
+    @extend %btn;
+}

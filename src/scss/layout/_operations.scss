@@ -1,0 +1,17 @@
+@import '../utilities/icons';
+
+
+.op {
+    &_mobile::before {
+        /* fa-mobile-alt */
+        @include content-icon(900, #7e7e7e, 1em, "\f3cd", 0);
+    }
+    &_list::before {
+        /* fa-list-ul */
+        @include content-icon(900, #7e7e7e, 1em, "\f0ca", 0);
+    }
+    &_store::before {
+        /* fa-store */
+        @include content-icon(900, #7e7e7e, 1em, "\f54e", 0);
+    }   
+}

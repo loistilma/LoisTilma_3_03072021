@@ -1,0 +1,19 @@
+@import '../utilities/icons';
+
+.header {
+    padding: 21px 23px 14px 23px;
+
+    &__title {
+        color: black;    
+        text-align: center;
+        position: relative;
+        font-size: 1.8em;
+    }
+
+    &__icon::before {
+        /* fa-arrow-left */
+        @include content-icon(900, #353535, 0.7em, "\f060", 0);
+        position: absolute;
+        left: 0;
+    }
+}

@@ -1,14 +1,225 @@
+@charset "UTF-8";
 /* Include partials */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body, html, div, img, label, p, h1, h2, h3, h4, h5, h6, ul,
+li, form, a, input, span, figure, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
 a {
-  color: #00B7FF;
+  display: block;
 }
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  line-height: 1;
 }
 
-img {
-  height: 200px;
-  width: 200px;
+ol {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body:not(header):not(.footer__title) {
+  font-family: 'Roboto', sans-serif;
+}
+
+header, .footer__title {
+  font-family: 'Shrikhand', cursive;
+}
+
+.header {
+  padding: 21px 23px 14px 23px;
+}
+
+.header__title {
+  color: black;
+  text-align: center;
+  position: relative;
+  font-size: 1.8em;
+}
+
+.header__icon::before {
+  /* fa-arrow-left */
+  font-family: "Font Awesome 5 Free";
+  color: #353535;
+  font-size: 0.7em;
+  font-weight: 900;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  position: absolute;
+  left: 0;
+}
+
+footer {
+  background: #353535;
+  color: white;
+}
+
+.footer__set::before {
+  /* fa-utensils */
+  font-family: "Font Awesome 5 Free";
+  color: white;
+  font-size: 1em;
+  font-weight: 900;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.footer__help::before {
+  /* fa-hands-helping */
+  font-family: "Font Awesome 5 Free";
+  color: white;
+  font-size: 1em;
+  font-weight: 900;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.place {
+  padding: 17px;
+  color: #353535;
+  background: #eaeaea;
+}
+
+.place__title {
+  display: block;
+  text-align: center;
+  position: relative;
+  font-size: 0.96em;
+  font-weight: 500;
+}
+
+.place__icon::before {
+  /* fa-map-marker-alt */
+  font-family: "Font Awesome 5 Free";
+  color: #353535;
+  font-size: 1em;
+  font-weight: 900;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(-250%, -50%);
+          transform: translate(-250%, -50%);
+  position: absolute;
+}
+
+.desc__btn {
+  border: none;
+  color: white;
+  background: #FF79DA;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 90%);
+}
+
+.op_mobile::before {
+  /* fa-mobile-alt */
+  font-family: "Font Awesome 5 Free";
+  color: #7e7e7e;
+  font-size: 1em;
+  font-weight: 900;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.op_list::before {
+  /* fa-list-ul */
+  font-family: "Font Awesome 5 Free";
+  color: #7e7e7e;
+  font-size: 1em;
+  font-weight: 900;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.op_store::before {
+  /* fa-store */
+  font-family: "Font Awesome 5 Free";
+  color: #7e7e7e;
+  font-size: 1em;
+  font-weight: 900;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.restaurants {
+  background: #f6f6f6;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  margin: 0 20px 0 20px;
+  position: relative;
+}
+
+.card a {
+  display: block;
+}
+
+.card .card__img {
+  height: 174px;
+  position: relative;
+}
+
+.card .card__img img {
+  border-radius: 15px 15px 0 0;
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.card .card__img--badge::after {
+  content: 'Nouveau';
+  padding: 9px 12px 9px 12px;
+  font-size: 0.9em;
+  background-color: #99e2d0;
+  color: #008766;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.card figcaption {
+  border-radius: 0 0 15px 15px;
+  height: 77px;
+}
+
+.card .card__like {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.card .card__like input {
+  display: none;
+}
+
+.card .card__like .fa-heart {
+  font-size: 25px;
+}
+
+.card .card__like input:checked + .fa-heart {
+  font-weight: 900;
 }
 /*# sourceMappingURL=index.css.map */

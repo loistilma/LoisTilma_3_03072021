@@ -1,0 +1,64 @@
+@import '../utilities/colors';
+@import '../utilities/margins';
+
+.restaurants {
+    background: $grey;
+}
+
+.card {
+    background: white;
+    border-radius: $rounded-border;
+    margin: $global-margin;
+    position: relative;
+    a {
+        display: block;
+    }
+
+    .card__img {
+    height: 174px;
+    position: relative;
+
+        img {
+            border-radius: $rounded-top;
+            height: 174px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        &--badge::after {
+            content: 'Nouveau';
+            padding: 9px 12px 9px 12px;
+            font-size: 0.9em;
+            background-color: #99e2d0;
+            color: #008766;
+            top: 0;
+            right: 0;        
+            position: absolute;
+        }
+    }
+
+    figcaption {
+        border-radius: $rounded-bottom;
+        height: 77px;
+    }
+
+    .card__like {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        input {
+            display: none
+        }
+
+        .fa-heart {
+            font-size: 25px;
+        }
+
+        input:checked + .fa-heart {
+            font-weight: 900;
+        }
+    }
+
+}
+

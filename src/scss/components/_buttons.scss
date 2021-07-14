@@ -1,0 +1,6 @@
+@import '../utilities/colors';
+
+%btn {
+    border: none;
+    @include gradient;
+}

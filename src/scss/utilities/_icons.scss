@@ -1,0 +1,9 @@
+@mixin content-icon($weight, $color, $size, $code, $x) {
+    font-family: "Font Awesome 5 Free";
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    content: $code;
+    top: 50%;
+    transform: translate($x, -50%);    
+}

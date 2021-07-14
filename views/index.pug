@@ -1,66 +1,64 @@
 extends layout
 
 block content
-  div
-    span(class='fas fa-map-marker-alt') Paris, Belleville
-  div
-    h2 Réservez le menu qui vous convient
+  div(class='place')
+    span(class='place__icon place__title') Paris, Belleville
+  section(class='desc')
+    h2(class='desc__title') Réservez le menu qui vous convient
     p Découvrez des restaurants d'exception, séléctionnés par nos soins.
-    button Explorez nos restaurants
-  main
-    section
-      h2 Fonctionnement
-      ol
-        li
-          span(class='fas fa-mobile-alt')
-          a(href='#') Choissisez un restaurant
-        li
-          span(class='fas fa-list-ul')
-          a(href='#') Composez votre menu
-        li
-          span(class='fas fa-store')
-          a(href='#') Dégustez au restaurant
-    section
-      h2 Restaurants 
-      div
-        a(href='/la-palette-du-gout')
-          figure
-            div
-              img(src='/images/restaurants/la-palette-du-gout.jpg', alt='La palette du goût')
-              span Nouveau
-            figcaption
-              p La palette du goût
-              p Ménilmontant
+    button(class='desc__btn') Explorez nos restaurants
+  section(class='op')
+    h2(class='op__title') Fonctionnement
+    ol(class='op_incr')
+      li
+        span(class='op_mobile') Choissisez un restaurant
+      li
+        span(class='op_list') Composez votre menu
+      li
+        span(class='op_store') Dégustez au restaurant
+  section(class='restaurants')
+    h2 Restaurants 
+    div(class='card')
+      a(href='/la-palette-du-gout')
+        figure
+          div(class='card__img card__img--badge')
+            img(src='/images/restaurants/la-palette-du-gout.jpg', alt='La palette du goût')
+          figcaption
+            p La palette du goût
+            p Ménilmontant
+      div(class='card__like')
         input(type='checkbox', id='like-1')
-        label(for='like-1', class='fas far fa-heart')
-      div
-        a(href='/la-note-enchantee')
-          figure
-            div
-              img(src='/images/restaurants/la-note-enchantee.jpg', alt='La note enchantée')
-              span Nouveau
-            figcaption
-              p La note enchantée
-              p Charonne
+        label(for='like-1', class='far fa-heart')
+    div(class='card')
+      a(href='/la-note-enchantee')
+        figure
+          div(class='card__img card__img--badge')
+            img(src='/images/restaurants/la-note-enchantee.jpg', alt='La note enchantée')
+          figcaption
+            p La note enchantée
+            p Charonne
+      div(class='card__like')
         input(type='checkbox', id='like-2')
-        label(for='like-2', class='fas far fa-heart')
-      div
-        a(href='/a-la-francaise')
-          figure
-            div
-              img(src='/images/restaurants/a-la-francaise.jpg', alt='À la française')
-            figcaption
-              p À la française
-              p Cité Rouge
+        label(for='like-2', class='far fa-heart')
+    div(class='card')
+      a(href='/a-la-francaise')
+        figure
+          div(class='card__img')
+            img(src='/images/restaurants/a-la-francaise.jpg', alt='À la française')
+          figcaption
+            p À la française
+            p Cité Rouge
+      div(class='card__like')
         input(type='checkbox', id='like-3')
-        label(for='like-3', class='fas far fa-heart')
-      div
-        a(href='/le-delice-des-sens')
-          figure
-            div
-              img(src='/images/restaurants/le-delice-des-sens.jpg', alt='Le délice des sens')
-            figcaption
-              p Le délice des sens
-              p Folie-Méricourt
+        label(for='like-3', class='far fa-heart')
+    div(class='card')
+      a(href='/le-delice-des-sens')
+        figure
+          div(class='card__img')
+            img(src='/images/restaurants/le-delice-des-sens.jpg', alt='Le délice des sens')
+          figcaption
+            p Le délice des sens
+            p Folie-Méricourt
+      div(class='card__like')
         input(type='checkbox', id='like-4')
-        label(for='like-4', class='fas far fa-heart')
+        label(for='like-4', class='far fa-heart')

@@ -1,5 +1,8 @@
 extends layout
-
+block header
+  header(class='header')
+    a(href='/')
+      h1(class='header__icon header__title')= title
 block content
     div
         img(src= restaurant.imgUrl, alt=restaurant.title)
