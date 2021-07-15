@@ -1,5 +1,6 @@
 @import '../utilities/icons';
 @import '../utilities/colors';
+@import '../utilities/position';
 
 .place {
     padding: 17px;
@@ -16,8 +17,9 @@
 
     &__icon::before {
         /* fa-map-marker-alt */
-        @include content-icon(900, $light-black, 1em, "\f3c5", -250%);
+        @include content-icon(900, $light-black, 1em, "\f3c5");
         position: absolute;
+        @include absolute-center(-250%, -50%);
     }
 
 }

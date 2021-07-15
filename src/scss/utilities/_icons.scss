@@ -1,9 +1,16 @@
-@mixin content-icon($weight, $color, $size, $code, $x) {
+@mixin content-icon($weight, $color, $size, $code) {
+    display: inline-block;
     font-family: "Font Awesome 5 Free";
     color: $color;
     font-size: $size;
     font-weight: $weight;
     content: $code;
-    top: 50%;
-    transform: translate($x, -50%);    
+    text-align: center;
+}
+
+@mixin circle-border($pixel) {
+    border-radius: 50%;
+    width: $pixel;
+    height: $pixel;
+    line-height: $pixel;
 }

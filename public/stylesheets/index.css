@@ -2,7 +2,7 @@
 /* Include partials */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-body, html, div, img, label, p, h1, h2, h3, h4, h5, h6, ul,
+body, html, div, img, label, p, h1, h2, h3, h4, h5, h6, ul, ol,
 li, form, a, input, span, figure, img {
   margin: 0;
   padding: 0;
@@ -25,7 +25,7 @@ ol {
   margin: 0;
 }
 
-ul {
+ul, ol {
   list-style: none;
 }
 
@@ -50,14 +50,17 @@ header, .footer__title {
 
 .header__icon::before {
   /* fa-arrow-left */
+  display: inline-block;
   font-family: "Font Awesome 5 Free";
   color: #353535;
   font-size: 0.7em;
   font-weight: 900;
   content: "";
+  text-align: center;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  vertical-align: middle;
   position: absolute;
   left: 0;
 }
@@ -69,26 +72,24 @@ footer {
 
 .footer__set::before {
   /* fa-utensils */
+  display: inline-block;
   font-family: "Font Awesome 5 Free";
   color: white;
   font-size: 1em;
   font-weight: 900;
   content: "";
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  text-align: center;
 }
 
 .footer__help::before {
   /* fa-hands-helping */
+  display: inline-block;
   font-family: "Font Awesome 5 Free";
   color: white;
   font-size: 1em;
   font-weight: 900;
   content: "";
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  text-align: center;
 }
 
 .place {
@@ -107,15 +108,18 @@ footer {
 
 .place__icon::before {
   /* fa-map-marker-alt */
+  display: inline-block;
   font-family: "Font Awesome 5 Free";
   color: #353535;
   font-size: 1em;
   font-weight: 900;
   content: "";
+  text-align: center;
+  position: absolute;
   top: 50%;
   -webkit-transform: translate(-250%, -50%);
           transform: translate(-250%, -50%);
-  position: absolute;
+  vertical-align: middle;
 }
 
 .desc__btn {
@@ -125,40 +129,111 @@ footer {
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 90%);
 }
 
-.op_mobile::before {
+.op ol {
+  margin: 0 20px 0 20px;
+}
+
+.op li {
+  counter-increment: incrementation;
+  position: relative;
+  left: 12px;
+  margin-right: 12px;
+}
+
+.op li:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.op li::before {
+  display: inline-block;
+  content: counter(incrementation);
+  font-size: 0.8em;
+  color: white;
+  position: absolute;
+  left: -12px;
+  background: #9356DC;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.op span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  height: 72px;
+  width: 100%;
+  background: #f6f6f6;
+  border-radius: 18px;
+  font-size: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+  font-size: 0.98em;
+  font-weight: 500;
+}
+
+.op__mobile::before {
   /* fa-mobile-alt */
+  display: inline-block;
   font-family: "Font Awesome 5 Free";
   color: #7e7e7e;
-  font-size: 1em;
+  font-size: 20px;
   font-weight: 900;
   content: "";
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  text-align: center;
+  padding-left: 12px;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  line-height: 72px;
+  width: 20%;
 }
 
-.op_list::before {
+.op__list::before {
   /* fa-list-ul */
+  display: inline-block;
   font-family: "Font Awesome 5 Free";
   color: #7e7e7e;
-  font-size: 1em;
+  font-size: 18px;
   font-weight: 900;
   content: "";
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  text-align: center;
+  padding-left: 12px;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  line-height: 72px;
+  width: 20%;
 }
 
-.op_store::before {
+.op__store::before {
   /* fa-store */
+  display: inline-block;
   font-family: "Font Awesome 5 Free";
   color: #7e7e7e;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: 900;
   content: "";
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  text-align: center;
+  padding-left: 12px;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  line-height: 72px;
+  width: 20%;
 }
 
 .restaurants {

@@ -1,17 +1,75 @@
 @import '../utilities/icons';
-
+@import '../utilities/colors';
+@import '../utilities/position';
 
 .op {
-    &_mobile::before {
+    ol {
+        margin: $global-margin;
+    }
+
+    li {
+        counter-increment: incrementation;
+        position: relative;
+        left: 12px;
+        margin-right: 12px;        
+    }
+
+    li:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+
+    li::before {
+        display: inline-block;
+        content: counter(incrementation);
+        font-size: 0.8em;
+        color: white;
+        position: absolute;
+        left: -12px;
+        background: $purple;
+        @include absolute-center(0, -50%);
+        @include circle-border(24px);
+        text-align: center;
+    }
+
+    span {
+        display: flex;
+        flex-flow: column wrap;
+        height: 72px;
+        width: 100%;
+        background: $grey;
+        border-radius: 18px;
+        font-size: 1em;
+        justify-content: center;
+        align-content: baseline;
+        font-size: 0.98em;
+        font-weight: 500;
+    }
+
+    &__mobile::before {
         /* fa-mobile-alt */
-        @include content-icon(900, #7e7e7e, 1em, "\f3cd", 0);
+        @include content-icon(900, #7e7e7e, 20px, "\f3cd");
+        padding-left: 12px;
+        flex: 100%;
+        line-height: 72px;
+        width: 20%;
     }
-    &_list::before {
+
+    &__list::before {
         /* fa-list-ul */
-        @include content-icon(900, #7e7e7e, 1em, "\f0ca", 0);
+        @include content-icon(900, #7e7e7e, 18px, "\f0ca");
+        padding-left: 12px;
+        flex: 100%;
+        line-height: 72px;
+        width: 20%;
     }
-    &_store::before {
+
+    &__store::before {
         /* fa-store */
-        @include content-icon(900, #7e7e7e, 1em, "\f54e", 0);
-    }   
+        @include content-icon(900, #7e7e7e, 16px, "\f54e");
+        padding-left: 12px;
+        flex: 100%;
+        line-height: 72px;
+        width: 20%;
+    }
+
 }

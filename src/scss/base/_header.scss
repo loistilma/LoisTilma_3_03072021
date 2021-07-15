@@ -1,4 +1,5 @@
 @import '../utilities/icons';
+@import '../utilities/position';
 
 .header {
     padding: 21px 23px 14px 23px;
@@ -12,7 +13,8 @@
 
     &__icon::before {
         /* fa-arrow-left */
-        @include content-icon(900, #353535, 0.7em, "\f060", 0);
+        @include content-icon(900, #353535, 0.7em, "\f060");
+        @include absolute-center(0, -50%);
         position: absolute;
         left: 0;
     }

@@ -8,10 +8,10 @@ footer {
 
 .footer__set::before {
     /* fa-utensils */
-    @include content-icon(900, white, 1em, "\f2e7", 0);
+    @include content-icon(900, white, 1em, "\f2e7");
 }
 
 .footer__help::before {
     /* fa-hands-helping */
-    @include content-icon(900, white, 1em, "\f4c4", 0);
+    @include content-icon(900, white, 1em, "\f4c4");
 }
