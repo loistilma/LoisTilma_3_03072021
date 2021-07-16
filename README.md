@@ -1,4 +1,4 @@
-# Ohmyfood
+# Ohmyfood - Static project
 
 ## Identité graphique
 * Polices
