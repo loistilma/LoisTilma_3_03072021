@@ -16,6 +16,7 @@ let restaurants = JSON.parse(rawdata);
 //console.log(restaurants[1]);
 
 for (i in restaurants) {
-  var htmlFile = pug.renderFile('./views/restaurant.pug', { pretty: true, title: 'ohmyfood', pageTitle: restaurants[i].title, restaurant: restaurants[i] });
-  fs.writeFileSync(restaurants[i].url, htmlFile);
+  var tempRestaurant = pug.renderFile('./views/restaurant.pug', { pretty: true, title: 'ohmyfood', pageTitle: restaurants[i].title, restaurant: restaurants[i] });
+  restaurantFile = tempRestaurant.replace('href="/"', 'href="/loistilma_3_03072021"')
+  fs.writeFileSync(restaurants[i].url, restaurantFile);
 }
