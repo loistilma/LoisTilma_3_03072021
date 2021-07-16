@@ -1,7 +1,7 @@
 @import '../utilities/icons';
 @import '../utilities/position';
 
-.header {
+.nav {
     padding: 21px 23px 14px 23px;
 
     &__title {
@@ -11,7 +11,7 @@
         font-size: 1.8em;
     }
 
-    &__icon::before {
+    &__back::before {
         /* fa-arrow-left */
         @include content-icon(900, #353535, 0.7em, "\f060");
         @include absolute-center(0, -50%);

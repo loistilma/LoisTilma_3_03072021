@@ -17,48 +17,56 @@ block content
       li
         span(class='op__store') Dégustez au restaurant
   section(class='restaurants')
-    h2 Restaurants 
-    div(class='card')
+    h2 Restaurants
+
+    div(class='card card--badge')
+      div(class='card__img')
+        img(src='/images/restaurants/la-palette-du-gout.jpg', alt='La palette du goût')
+      div(class='card__desc')
+        div(class='card__caption')
+          h3 La palette du goût
+          p Ménilmontant
+        div(class='card__like')
+          input(type='checkbox', id='like-1')
+          label(for='like-1', class='far fa-heart')          
       a(href='/la-palette-du-gout')
-        figure
-          div(class='card__img card__img--badge')
-            img(src='/images/restaurants/la-palette-du-gout.jpg', alt='La palette du goût')
-          figcaption
-            p La palette du goût
-            p Ménilmontant
-      div(class='card__like')
-        input(type='checkbox', id='like-1')
-        label(for='like-1', class='far fa-heart')
-    div(class='card')
+        span(class='card__url')
+
+    div(class='card card--badge')
+      div(class='card__img')
+        img(src='/images/restaurants/la-note-enchantee.jpg', alt='La note enchantée')
+      div(class='card__desc')
+        div(class='card__caption')
+          h3 La note enchantée
+          p Charonne
+        div(class='card__like')
+          input(type='checkbox', id='like-2')
+          label(for='like-2', class='far fa-heart')          
       a(href='/la-note-enchantee')
-        figure
-          div(class='card__img card__img--badge')
-            img(src='/images/restaurants/la-note-enchantee.jpg', alt='La note enchantée')
-          figcaption
-            p La note enchantée
-            p Charonne
-      div(class='card__like')
-        input(type='checkbox', id='like-2')
-        label(for='like-2', class='far fa-heart')
+        span(class='card__url')
+
     div(class='card')
+      div(class='card__img')
+        img(src='/images/restaurants/a-la-francaise.jpg', alt='À la française')
+      div(class='card__desc')
+        div(class='card__caption')
+          h3 À la française
+          p Cité Rouge
+        div(class='card__like')
+          input(type='checkbox', id='like-3')
+          label(for='like-3', class='far fa-heart')          
       a(href='/a-la-francaise')
-        figure
-          div(class='card__img')
-            img(src='/images/restaurants/a-la-francaise.jpg', alt='À la française')
-          figcaption
-            p À la française
-            p Cité Rouge
-      div(class='card__like')
-        input(type='checkbox', id='like-3')
-        label(for='like-3', class='far fa-heart')
+        span(class='card__url')
+
     div(class='card')
+      div(class='card__img')
+        img(src='/images/restaurants/le-delice-des-sens.jpg', alt='Le délice des sens')
+      div(class='card__desc')
+        div(class='card__caption')
+          h3 Le délice des sens
+          p Folie-Méricourt
+        div(class='card__like')
+          input(type='checkbox', id='like-4')
+          label(for='like-4', class='far fa-heart')          
       a(href='/le-delice-des-sens')
-        figure
-          div(class='card__img')
-            img(src='/images/restaurants/le-delice-des-sens.jpg', alt='Le délice des sens')
-          figcaption
-            p Le délice des sens
-            p Folie-Méricourt
-      div(class='card__like')
-        input(type='checkbox', id='like-4')
-        label(for='like-4', class='far fa-heart')
+        span(class='card__url')

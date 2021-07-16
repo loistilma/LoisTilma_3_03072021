@@ -2,5 +2,9 @@
 
 %btn {
     border: none;
-    @include gradient;
+    background: $gradient;
+
+    &:hover {
+        background: $lighten-gradient;
+    }
 }

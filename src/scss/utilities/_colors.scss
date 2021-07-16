@@ -6,8 +6,7 @@ $green: #99E2D0;
 $dark-green: #008766;
 $grey: #f6f6f6;
 $light-black: #353535;
-@mixin gradient {
-    color: white;
-    background: $pink;
-    background: linear-gradient(175deg, $pink 0%, $purple 90%); 
-}
+
+$gradient: linear-gradient(178deg, $pink 0%, $purple 90%);
+$invert-gradient: linear-gradient(178deg, $purple 0%, $pink 90%);
+$lighten-gradient: linear-gradient(178deg, lighten($pink, 5%) 0%, lighten($purple, 5%) 90%);

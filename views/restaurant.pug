@@ -1,8 +1,8 @@
 extends layout
 block header
-  header(class='header')
-    a(href='/')
-      h1(class='header__icon header__title')= title
+  header
+    nav(class='nav')
+      h1: a(class='nav__back nav__title' href='/')= title
 block content
     div
         img(src= restaurant.imgUrl, alt=restaurant.title)
