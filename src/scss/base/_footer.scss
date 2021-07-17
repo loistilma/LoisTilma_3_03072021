@@ -4,14 +4,63 @@
 footer {
     background: $light-black;
     color: white;
+    padding: 20px 20px 30px 20px;
+
+    h4 {
+        padding-bottom: 20px;
+    }
+
+    a {
+        color: white;
+    }
+
+    &__list {
+        display: flex;
+        flex-flow:column wrap;
+    }
+    li:not(:first-of-type):not(:nth-of-type(2)) {
+        font-size: 0.97em;
+        font-weight: 400;
+    }
+    li:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
 }
 
-.footer__set::before {
-    /* fa-utensils */
-    @include content-icon(900, white, 1em, "\f2e7");
+.footer__set {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: baseline;
+    height: 15px;
+    line-height: 15px;
+    font-size: 0.97em;
+    font-weight: 500;
+
+    &::before {
+        /* fa-utensils */
+        @include content-icon(900, white, 13px, "\f2e7");
+        flex: 100%;
+        width: 15px;
+        padding-right: 3px;
+        text-align: inherit;
+    }
 }
 
-.footer__help::before {
-    /* fa-hands-helping */
-    @include content-icon(900, white, 1em, "\f4c4");
+.footer__help {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: baseline;
+    height: 15px;
+    line-height: 15px;
+    font-size: 0.97em;
+    font-weight: 500;
+
+    &::before {
+        /* fa-hands-helping */
+        @include content-icon(900, white, 12px, "\f4c4");
+        flex: 100%;
+        width: 15px;
+        padding-right: 3px;
+        text-align: inherit;
+    }
 }
