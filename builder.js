@@ -17,6 +17,6 @@ let restaurants = JSON.parse(rawdata);
 
 for (i in restaurants) {
   var tempRestaurant = pug.renderFile('./views/restaurant.pug', { pretty: true, title: 'ohmyfood', pageTitle: restaurants[i].title, restaurant: restaurants[i] });
-  restaurantFile = tempRestaurant.replace('href="/"', 'href="/loistilma_3_03072021"')
+  restaurantFile = tempRestaurant.replace('href="/#restaurants"', 'href="/loistilma_3_03072021#restaurants"')
   fs.writeFileSync(restaurants[i].url, restaurantFile);
 }

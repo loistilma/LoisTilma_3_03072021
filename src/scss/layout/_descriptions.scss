@@ -1,5 +1,22 @@
 @import '../components/buttons';
+@import '../utilities/position';
+@import '../utilities/colors';
+
+.desc {
+    text-align: center;
+    background: $grey;
+    padding: 40px 0 55px 0;
+    h2 {
+        padding: 0 66px 20px 66px;
+    }
+    p {
+        padding: 0 40px 30px 40px;
+        font-size: 1.05em;
+        font-weight: 300;
+    }
+}
 
 .desc__btn {
     @extend %btn;
+    color: white;
 }
