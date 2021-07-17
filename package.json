@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "builder": "node builder.js & node-sass --source-map true -r src/scss/index.scss -o stylesheets/index.css"
+    "builder": "node builder.js & node-sass --source-map true -r src/scss/index.scss -o stylesheets/"
   },
   "dependencies": {
     "debug": "~2.6.9",
