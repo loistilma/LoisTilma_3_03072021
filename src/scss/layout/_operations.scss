@@ -1,12 +1,11 @@
-@import '../utilities/icons';
-@import '../utilities/colors';
-@import '../utilities/position';
-
 .op {
     padding: 50px 0 60px 0;
     margin: $global-margin;
-    h2 {
+    
+    &__title {
         padding: 0 0 30px 0;
+        font-size: 1.40em;
+        font-weight: 600;
     }
     li {
         counter-increment: incrementation;

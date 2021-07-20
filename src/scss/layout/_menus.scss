@@ -1,0 +1,38 @@
+.menu {
+    padding: 35px 20px 0 20px;
+    border-radius: 40px 40px 0 0;
+    background: $grey;
+    h3 {
+        font-size: 1em;
+        font-weight: 300;
+        position: relative;
+        padding-bottom: 7px;
+    }
+    button {
+        @extend %btn;
+    }
+}
+
+.restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &__title {
+        font-size: 1.6em;
+        font-weight: 400;
+    }
+    &__like {
+        input {
+            display: none
+        }
+
+        .fa-heart {
+            font-size: 25px;
+        }
+
+        input:checked + .fa-heart {
+            font-weight: 900;
+        }
+    }
+}
