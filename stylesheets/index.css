@@ -368,7 +368,10 @@ footer {
   height: 68px;
   background: white;
   border-radius: 15px;
-  overflow: hidden; }
+  overflow: hidden;
+  /*input:hover + label {
+        width: 68px;
+    }*/ }
   .dish__box input {
     position: absolute;
     opacity: 0;
@@ -378,11 +381,9 @@ footer {
     left: 0;
     z-index: 1; }
   .dish__box input:checked + label {
+    transition: width 0.5s;
     width: 68px; }
-  .dish__box input:hover + label {
-    transition: 0.5s;
-    width: 68px; }
-  .dish__box input:hover + label .fa-check {
+  .dish__box input:checked + label .fa-check {
     transition: 0.5s;
     transform: translate(0, 100%) rotate(1turn); }
 
@@ -423,7 +424,8 @@ footer {
   align-self: center;
   height: 100%;
   width: 0px;
-  position: relative; }
+  position: relative;
+  transition: width 0.5s; }
   .order__box {
     display: block;
     position: absolute;
