@@ -23,13 +23,21 @@
         left: 0;
         z-index: 1;
     }
+
     input:checked + label {
         width: 68px;
     }
 
     input:hover + label {
+        transition: 0.5s;
         width: 68px;
     }
+
+    input:hover + label .fa-check  {
+        transition: 0.5s;
+        transform: translate(0, 100%) rotate(1turn);
+    }
+
 }
 
 .dish__desc {
@@ -37,7 +45,7 @@
     flex-flow: column;
     flex: 1;
     overflow: hidden;
-    padding: 14px 0 14px 0;
+    padding: 14px 0 14px 12px;
 
     p:nth-of-type(1) {
         height: 20px;
@@ -78,20 +86,22 @@
     position: relative;
 
     &__box {
+        display: block;
         position: absolute;
         left: 0;
         height: 100%;
         width: 68px;
-        div {
+
+        .order__check {
+            display: block;
             background: $green;
             height: 100%;
             text-align: center;
         }
 
-        span {
+        .fa-check {
             background: white;
             color: $green;
-            
             @include absolute-center(0, 100%);
             @include circle-border(24px);
         }        
