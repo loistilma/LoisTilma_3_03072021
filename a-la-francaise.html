@@ -14,62 +14,140 @@
         <h1><a class="nav__back nav__title" href="/loistilma_3_03072021#restaurants">ohmyfood</a></h1>
       </nav>
     </header>
-    <div><img src="images/restaurants/a-la-francaise.jpg" alt="À la française"></div>
-    <section>
-      <h2>À la française<span class="fas far fa-heart"></span></h2>
-      <h3>ENTRÉES</h3>
-      <div>
-        <ul>
-          <li>Tartare de poulpe acidulé</li>
-          <li>Aux zestes d'orange</li>
-          <li>25€</li>
-        </ul>
-        <ul>
-          <li>Velouté de légumes d'antan</li>
-          <li>Carotte, panais, topinambour</li>
-          <li>35€</li>
-        </ul>
-        <ul>
-          <li>Soupe à l'oignon</li>
-          <li>Revisitée</li>
-          <li>20€</li>
-        </ul>
+    <div class="intro"><img src="images/restaurants/a-la-francaise.jpg" alt="À la française"></div>
+    <section class="menu">
+      <div class="restaurant">
+        <h2 class="restaurant__title">À la française</h2>
+        <div class="restaurant__like">
+          <input type="checkbox" id="like">
+          <label class="far fa-heart" for="like"></label>
+        </div>
       </div>
-      <h3>PLATS</h3>
-      <div>
-        <ul>
-          <li>Coquilles Saint-Jacques</li>
-          <li>Accompagnées d'une purée de panais</li>
-          <li>40€</li>
-        </ul>
-        <ul>
-          <li>Magret de canard</li>
-          <li>Et parmentier de pommes de terre</li>
-          <li>35€</li>
-        </ul>
-        <ul>
-          <li>Pigeonneau d’Ille-et-Vilaine</li>
-          <li>Sur son lit de gnocchis aux légumes</li>
-          <li>44€</li>
-        </ul>
+      <h3 class="dish--border">ENTRÉES</h3>
+      <div class="dish">
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Tartare de poulpe acidulé</p>
+            <p>Aux zestes d'orange</p>
+          </div>
+          <div class="dish__price"><span>25€</span></div>
+          <input type="checkbox" id="checked-1">
+          <label class="order" for="checked-1">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Velouté de légumes d'antan</p>
+            <p>Carotte, panais, topinambour</p>
+          </div>
+          <div class="dish__price"><span>35€</span></div>
+          <input type="checkbox" id="checked-2">
+          <label class="order" for="checked-2">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Soupe à l'oignon</p>
+            <p>Revisitée</p>
+          </div>
+          <div class="dish__price"><span>20€</span></div>
+          <input type="checkbox" id="checked-3">
+          <label class="order" for="checked-3">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
       </div>
-      <h3>DESSERTS</h3>
+      <h3 class="dish--border">PLATS</h3>
       <div>
-        <ul>
-          <li>Pétales de violettes glacés</li>
-          <li>Et purée de noisettes</li>
-          <li>18€</li>
-        </ul>
-        <ul>
-          <li>Fondant au chocolat</li>
-          <li>Revisité</li>
-          <li>22€</li>
-        </ul>
-        <ul>
-          <li>Millefeuille croustillant</li>
-          <li>Myrtilles et pâte d’amande</li>
-          <li>23€</li>
-        </ul>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Coquilles Saint-Jacques</p>
+            <p>Accompagnées d'une purée de panais</p>
+          </div>
+          <div class="dish__price"><span>40€</span></div>
+          <input type="checkbox" id="checked-4">
+          <label class="order" for="checked-4">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Magret de canard</p>
+            <p>Et parmentier de pommes de terre</p>
+          </div>
+          <div class="dish__price"><span>35€</span></div>
+          <input type="checkbox" id="checked-5">
+          <label class="order" for="checked-5">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Pigeonneau d’Ille-et-Vilaine</p>
+            <p>Sur son lit de gnocchis aux légumes</p>
+          </div>
+          <div class="dish__price"><span>44€</span></div>
+          <input type="checkbox" id="checked-6">
+          <label class="order" for="checked-6">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <h3 class="dish--border">DESSERTS</h3>
+      <div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Pétales de violettes glacés</p>
+            <p>Et purée de noisettes</p>
+          </div>
+          <div class="dish__price"><span>18€</span></div>
+          <input type="checkbox" id="checked-7">
+          <label class="order" for="checked-7">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Fondant au chocolat</p>
+            <p>Revisité</p>
+          </div>
+          <div class="dish__price"><span>22€</span></div>
+          <input type="checkbox" id="checked-8">
+          <label class="order" for="checked-8">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Millefeuille croustillant</p>
+            <p>Myrtilles et pâte d’amande</p>
+          </div>
+          <div class="dish__price"><span>23€</span></div>
+          <input type="checkbox" id="checked-9">
+          <label class="order" for="checked-9">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
       </div>
       <button>Commander</button>
     </section>

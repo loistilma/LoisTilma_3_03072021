@@ -14,67 +14,153 @@
         <h1><a class="nav__back nav__title" href="/loistilma_3_03072021#restaurants">ohmyfood</a></h1>
       </nav>
     </header>
-    <div><img src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée"></div>
-    <section>
-      <h2>La note enchantée<span class="fas far fa-heart"></span></h2>
-      <h3>ENTRÉES</h3>
-      <div>
-        <ul>
-          <li>Ravioles de foie gras</li>
-          <li>Accompagnés de leur crème à la truffe</li>
-          <li>25€</li>
-        </ul>
-        <ul>
-          <li>Caviar osciètre</li>
-          <li>Sur blini à la farine de blé noir</li>
-          <li>35€</li>
-        </ul>
-        <ul>
-          <li>Homard et espuma de potiron</li>
-          <li>Mariné aux zestes d'orange</li>
-          <li>20€</li>
-        </ul>
-        <ul>
-          <li>Foie gras de canard cuit entier</li>
-          <li>Confiture de figue et pain toasté</li>
-          <li>35€</li>
-        </ul>
+    <div class="intro"><img src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée"></div>
+    <section class="menu">
+      <div class="restaurant">
+        <h2 class="restaurant__title">La note enchantée</h2>
+        <div class="restaurant__like">
+          <input type="checkbox" id="like">
+          <label class="far fa-heart" for="like"></label>
+        </div>
       </div>
-      <h3>PLATS</h3>
-      <div>
-        <ul>
-          <li>Noix de coquilles Saint-Jacques</li>
-          <li>Sur lit de purée de céleri-rave</li>
-          <li>40€</li>
-        </ul>
-        <ul>
-          <li>Langoustine poêlée</li>
-          <li>Purée de patate douce</li>
-          <li>35€</li>
-        </ul>
-        <ul>
-          <li>Mijoté de queue de boeuf</li>
-          <li>Et riz sauvage aux zestes de citron</li>
-          <li>44€</li>
-        </ul>
+      <h3 class="dish--border">ENTRÉES</h3>
+      <div class="dish">
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Ravioles de foie gras</p>
+            <p>Accompagnés de leur crème à la truffe</p>
+          </div>
+          <div class="dish__price"><span>25€</span></div>
+          <input type="checkbox" id="checked-1">
+          <label class="order" for="checked-1">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Caviar osciètre</p>
+            <p>Sur blini à la farine de blé noir</p>
+          </div>
+          <div class="dish__price"><span>35€</span></div>
+          <input type="checkbox" id="checked-2">
+          <label class="order" for="checked-2">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Homard et espuma de potiron</p>
+            <p>Mariné aux zestes d'orange</p>
+          </div>
+          <div class="dish__price"><span>20€</span></div>
+          <input type="checkbox" id="checked-3">
+          <label class="order" for="checked-3">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Foie gras de canard cuit entier</p>
+            <p>Confiture de figue et pain toasté</p>
+          </div>
+          <div class="dish__price"><span>35€</span></div>
+          <input type="checkbox" id="checked-4">
+          <label class="order" for="checked-4">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
       </div>
-      <h3>DESSERTS</h3>
+      <h3 class="dish--border">PLATS</h3>
       <div>
-        <ul>
-          <li>Macaron noisette et chocolat</li>
-          <li>Glace au caramel brun et sel de Guérande</li>
-          <li>18€</li>
-        </ul>
-        <ul>
-          <li>Baba au rhum revisité</li>
-          <li>Avec son coulis de citron</li>
-          <li>22€</li>
-        </ul>
-        <ul>
-          <li>Tarte au citron meringuée</li>
-          <li>Déstructurée</li>
-          <li>23€</li>
-        </ul>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Noix de coquilles Saint-Jacques</p>
+            <p>Sur lit de purée de céleri-rave</p>
+          </div>
+          <div class="dish__price"><span>40€</span></div>
+          <input type="checkbox" id="checked-5">
+          <label class="order" for="checked-5">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Langoustine poêlée</p>
+            <p>Purée de patate douce</p>
+          </div>
+          <div class="dish__price"><span>35€</span></div>
+          <input type="checkbox" id="checked-6">
+          <label class="order" for="checked-6">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Mijoté de queue de boeuf</p>
+            <p>Et riz sauvage aux zestes de citron</p>
+          </div>
+          <div class="dish__price"><span>44€</span></div>
+          <input type="checkbox" id="checked-7">
+          <label class="order" for="checked-7">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <h3 class="dish--border">DESSERTS</h3>
+      <div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Macaron noisette et chocolat</p>
+            <p>Glace au caramel brun et sel de Guérande</p>
+          </div>
+          <div class="dish__price"><span>18€</span></div>
+          <input type="checkbox" id="checked-8">
+          <label class="order" for="checked-8">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Baba au rhum revisité</p>
+            <p>Avec son coulis de citron</p>
+          </div>
+          <div class="dish__price"><span>22€</span></div>
+          <input type="checkbox" id="checked-9">
+          <label class="order" for="checked-9">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Tarte au citron meringuée</p>
+            <p>Déstructurée</p>
+          </div>
+          <div class="dish__price"><span>23€</span></div>
+          <input type="checkbox" id="checked-10">
+          <label class="order" for="checked-10">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
       </div>
       <button>Commander</button>
     </section>

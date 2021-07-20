@@ -14,62 +14,140 @@
         <h1><a class="nav__back nav__title" href="/loistilma_3_03072021#restaurants">ohmyfood</a></h1>
       </nav>
     </header>
-    <div><img src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens"></div>
-    <section>
-      <h2>Le délice des sens<span class="fas far fa-heart"></span></h2>
-      <h3>ENTRÉES</h3>
-      <div>
-        <ul>
-          <li>Tartare de thon</li>
-          <li>Assaisonné au yuzu</li>
-          <li>25€</li>
-        </ul>
-        <ul>
-          <li>Bouchée de homard croustillant</li>
-          <li>Et sa farandole de petits légumes</li>
-          <li>35€</li>
-        </ul>
-        <ul>
-          <li>Velouté de cèpes</li>
-          <li>Aux truffes</li>
-          <li>20€</li>
-        </ul>
+    <div class="intro"><img src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens"></div>
+    <section class="menu">
+      <div class="restaurant">
+        <h2 class="restaurant__title">Le délice des sens</h2>
+        <div class="restaurant__like">
+          <input type="checkbox" id="like">
+          <label class="far fa-heart" for="like"></label>
+        </div>
       </div>
-      <h3>PLATS</h3>
-      <div>
-        <ul>
-          <li>Poulet rôti aux herbes de Provence</li>
-          <li>Et sa crème de truffe</li>
-          <li>40€</li>
-        </ul>
-        <ul>
-          <li>Langouste rôtie</li>
-          <li>Et ses légumes de saison</li>
-          <li>35€</li>
-        </ul>
-        <ul>
-          <li>Côte de boeuf Angus</li>
-          <li>Et sa purée de panais</li>
-          <li>44€</li>
-        </ul>
+      <h3 class="dish--border">ENTRÉES</h3>
+      <div class="dish">
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Tartare de thon</p>
+            <p>Assaisonné au yuzu</p>
+          </div>
+          <div class="dish__price"><span>25€</span></div>
+          <input type="checkbox" id="checked-1">
+          <label class="order" for="checked-1">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Bouchée de homard croustillant</p>
+            <p>Et sa farandole de petits légumes</p>
+          </div>
+          <div class="dish__price"><span>35€</span></div>
+          <input type="checkbox" id="checked-2">
+          <label class="order" for="checked-2">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Velouté de cèpes</p>
+            <p>Aux truffes</p>
+          </div>
+          <div class="dish__price"><span>20€</span></div>
+          <input type="checkbox" id="checked-3">
+          <label class="order" for="checked-3">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
       </div>
-      <h3>DESSERTS</h3>
+      <h3 class="dish--border">PLATS</h3>
       <div>
-        <ul>
-          <li>Farandole de desserts</li>
-          <li>Du chef</li>
-          <li>18€</li>
-        </ul>
-        <ul>
-          <li>Crème brulée</li>
-          <li>Revisitée</li>
-          <li>22€</li>
-        </ul>
-        <ul>
-          <li>Tiramisu</li>
-          <li>À la noisette</li>
-          <li>23€</li>
-        </ul>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Poulet rôti aux herbes de Provence</p>
+            <p>Et sa crème de truffe</p>
+          </div>
+          <div class="dish__price"><span>40€</span></div>
+          <input type="checkbox" id="checked-4">
+          <label class="order" for="checked-4">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Langouste rôtie</p>
+            <p>Et ses légumes de saison</p>
+          </div>
+          <div class="dish__price"><span>35€</span></div>
+          <input type="checkbox" id="checked-5">
+          <label class="order" for="checked-5">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Côte de boeuf Angus</p>
+            <p>Et sa purée de panais</p>
+          </div>
+          <div class="dish__price"><span>44€</span></div>
+          <input type="checkbox" id="checked-6">
+          <label class="order" for="checked-6">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <h3 class="dish--border">DESSERTS</h3>
+      <div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Farandole de desserts</p>
+            <p>Du chef</p>
+          </div>
+          <div class="dish__price"><span>18€</span></div>
+          <input type="checkbox" id="checked-7">
+          <label class="order" for="checked-7">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Crème brulée</p>
+            <p>Revisitée</p>
+          </div>
+          <div class="dish__price"><span>22€</span></div>
+          <input type="checkbox" id="checked-8">
+          <label class="order" for="checked-8">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
+        <div class="dish__box">
+          <div class="dish__desc">
+            <p>Tiramisu</p>
+            <p>À la noisette</p>
+          </div>
+          <div class="dish__price"><span>23€</span></div>
+          <input type="checkbox" id="checked-9">
+          <label class="order" for="checked-9">
+            <div class="order__box">
+              <div class="order__check"><span class="fas fa-check"></span></div>
+            </div>
+          </label>
+        </div>
       </div>
       <button>Commander</button>
     </section>

@@ -5,18 +5,8 @@ body:not(header):not(.footer__title) {
     font-family: 'Roboto', sans-serif;
 }
 
-header, .footer__title {
+header, .footer__title, .restaurant__title {
     font-family: 'Shrikhand', cursive;
-}
-
-h2 {
-    font-size: 1.40em;
-    font-weight: 600;
-}
-
-h3 {
-    font-size: 1.15em;
-    font-weight: 600;    
 }
 
 h4 {
