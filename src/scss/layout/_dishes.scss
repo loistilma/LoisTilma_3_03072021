@@ -25,15 +25,15 @@
     }
 
     input:checked + label {
+        transition: width 0.5s;
         width: 68px;
     }
 
-    input:hover + label {
-        transition: 0.5s;
+    /*input:hover + label {
         width: 68px;
-    }
+    }*/
 
-    input:hover + label .fa-check  {
+    input:checked + label .fa-check  {
         transition: 0.5s;
         transform: translate(0, 100%) rotate(1turn);
     }
@@ -84,6 +84,7 @@
     height: 100%;
     width: 0px;
     position: relative;
+    transition: width 0.5s;
 
     &__box {
         display: block;

@@ -477,6 +477,9 @@ footer li:not(:last-of-type) {
   background: white;
   border-radius: 15px;
   overflow: hidden;
+  /*input:hover + label {
+        width: 68px;
+    }*/
 }
 
 .dish__box input {
@@ -490,15 +493,11 @@ footer li:not(:last-of-type) {
 }
 
 .dish__box input:checked + label {
+  transition: width 0.5s;
   width: 68px;
 }
 
-.dish__box input:hover + label {
-  transition: 0.5s;
-  width: 68px;
-}
-
-.dish__box input:hover + label .fa-check {
+.dish__box input:checked + label .fa-check {
   transition: 0.5s;
   transform: translate(0, 100%) rotate(1turn);
 }
@@ -547,6 +546,7 @@ footer li:not(:last-of-type) {
   height: 100%;
   width: 0px;
   position: relative;
+  transition: width 0.5s;
 }
 
 .order__box {
