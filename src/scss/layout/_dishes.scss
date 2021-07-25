@@ -19,6 +19,7 @@
     background: white;
     border-radius: 15px;
     overflow: hidden;
+    @include box-shadow('', 0px, 5px, 10px, -2px); 
 
     &:not(:last-of-type) {
         margin-bottom: 15px;
@@ -113,7 +114,7 @@
         .fa-check {
             background: white;
             color: $green;
-            @include absolute-center(0, 100%);
+            @include transform-center(50%, 0, 100%);
             @include circle-border(24px);
         }        
     }

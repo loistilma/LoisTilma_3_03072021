@@ -1,8 +1,7 @@
 .restaurants {
     background: $grey;
-    padding: 40px 20px 55px 20px;
-    
     h2 {
+        flex: 100%;
         padding: 0 0 30px 0;
         font-size: 1.40em;
         font-weight: 600;
@@ -13,37 +12,34 @@
     background: white;
     border-radius: $rounded-border;
     position: relative;
-    &:not(:last-of-type) {
-        margin: 0 0 18px 0;
-    }
+    @include box-shadow('', 0px, 5px, 10px, -2px); 
+
     &--badge::after {
         content: 'Nouveau';
-        font-size: 0.83em;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        font-size: 0.87em;
         font-weight: 500;
         margin: 13px;
         height: 29px;
         width: 79px;
-        text-align: center;
-        line-height: 29px;
-        font-size: 0.9em;
         border-radius: 2px;
-        background-color: #99e2d0;
-        color: #008766;
+        background-color: $green;
+        color: $dark-green;
         top: 0;
         right: 0;        
         position: absolute;
     }
 
-    .card__img {
-    height: 174px;
-    position: relative;
+    img {
+        border-radius: $rounded-top;
+        object-fit: cover;
+        width: 100%;
+    }
 
-        img {
-            border-radius: $rounded-top;
-            height: 174px;
-            object-fit: cover;
-            width: 100%;
-        }
+    .card__img {
+        position: relative; 
     }
 
     &__desc {
@@ -99,3 +95,64 @@
 
 }
 
+@mixin restaurants--sm() {
+    .restaurants {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 40px 20px 55px 20px;
+    } 
+}
+
+@mixin restaurants--md() {
+    .restaurants {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+@mixin restaurants--xl() {
+    .restaurants {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 40px 60px 55px 60px;
+    }
+}
+
+@mixin card--sm() {
+    .card {
+        &:not(:last-of-type) {
+            margin: 0 0 18px 0;   
+        }
+    }
+
+    img {
+        height: 174px;
+    }
+
+    .card__img {
+        height: 174px;
+    }
+
+}
+
+@mixin card--md() {
+    .card {
+        width: 49%;
+        margin: 0 0 18px 0;
+    }
+
+}
+
+@mixin card--xl() {
+    .card {
+        width: 49%;
+        margin: 0 0 18px 0;
+    }
+    img {
+        height: 350px; 
+    }
+    .card__img {
+        height: 350px;
+    }
+}

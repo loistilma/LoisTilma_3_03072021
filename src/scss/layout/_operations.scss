@@ -1,34 +1,36 @@
+$op-icons: 
+    "__mobile" "\f3cd" 20px, 
+    "__list" "\f0ca" 18px, 
+    "__store" "\f54e" 16px;
+
 .op {
-    padding: 50px 0 60px 0;
-    margin: $global-margin;
-    
+ 
     &__title {
+        width: 100%;
         padding: 0 0 30px 0;
         font-size: 1.40em;
         font-weight: 600;
     }
+
     li {
         counter-increment: incrementation;
         position: relative;
         left: 12px;
-        margin-right: 12px;        
-    }
-
-    li:not(:last-of-type) {
-        margin-bottom: 24px;
+        margin-right: 12px;
+        border-radius: 18px;
+        @include box-shadow('', 0px, 5px, 10px, -2px);      
     }
 
     li::before {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         content: counter(incrementation);
         font-size: 0.8em;
         color: white;
         position: absolute;
         left: -12px;
         background: $purple;
-        @include absolute-center(0, -50%);
-        @include circle-border(24px);
-        text-align: center;
     }
 
     span {
@@ -44,32 +46,86 @@
         font-size: 0.98em;
         font-weight: 500;
     }
+    
+    @each $name, $icon, $icon-size  in $op-icons {
+        &#{$name}::before {
+            @include content-icon(900, #7e7e7e, $icon-size, $icon);
+            padding-left: 12px;
+            flex: 100%;
+            @include flex-center;
+            width: 20%;            
+        }
+      }
 
-    &__mobile::before {
-        /* fa-mobile-alt */
-        @include content-icon(900, #7e7e7e, 20px, "\f3cd");
-        padding-left: 12px;
-        flex: 100%;
-        line-height: 72px;
-        width: 20%;
+}
+
+@mixin op--sm() {
+    .op {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 50px 0 60px 0;
+        margin: 0 20px 0 20px;
+
+        li::before {
+            @include transform-center(50%, 0, -50%);
+            @include circle-border(24px);
+        }
+
+        li:not(:last-of-type) {
+            margin-bottom: 24px;
+        }
+
+        span {
+            align-content: baseline;
+        }
     }
+}
 
-    &__list::before {
-        /* fa-list-ul */
-        @include content-icon(900, #7e7e7e, 18px, "\f0ca");
-        padding-left: 12px;
-        flex: 100%;
-        line-height: 72px;
-        width: 20%;
+@mixin op--md() {
+    .op {
+        padding: 50px 0 60px 0;
+        margin: 0 20px 0 20px;  
     }
+}
 
-    &__store::before {
-        /* fa-store */
-        @include content-icon(900, #7e7e7e, 16px, "\f54e");
-        padding-left: 12px;
-        flex: 100%;
-        line-height: 72px;
-        width: 20%;
+@mixin op--xl() {
+    .op {
+        margin: 0 60px 0 60px;
+        &__incr {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        li {
+            flex: 1;
+            height: 80px;
+            left: 0;
+            margin-right: 0;
+        }
+
+        li::before {
+            @include transform-center(0, 0, -50%);
+            @include circle-border(35px);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        span {
+            height: 80px;
+            align-content: center;
+        }
+
+        @each $name, $icon, $icon-size  in $op-icons {
+            &#{$name}::before {
+                width: 0;
+                margin-right: 250px;
+                position: absolute;        
+            }
+        }
     }
-
 }

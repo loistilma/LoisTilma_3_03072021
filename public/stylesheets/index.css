@@ -69,18 +69,15 @@ h4 {
 
 .nav__back::before {
   /* fa-arrow-left */
-  display: inline-block;
+  display: flex;
   font-family: "Font Awesome 5 Free";
   color: #353535;
   font-size: 0.7em;
   font-weight: 900;
   content: "";
-  text-align: center;
   top: 50%;
   transform: translate(0, -50%);
-  vertical-align: middle;
   position: absolute;
-  left: 0;
 }
 
 footer {
@@ -123,13 +120,12 @@ footer li:not(:last-of-type) {
 
 .footer__set::before {
   /* fa-utensils */
-  display: inline-block;
+  display: flex;
   font-family: "Font Awesome 5 Free";
   color: white;
   font-size: 13px;
   font-weight: 900;
   content: "";
-  text-align: center;
   flex: 100%;
   width: 15px;
   padding-right: 3px;
@@ -148,13 +144,12 @@ footer li:not(:last-of-type) {
 
 .footer__help::before {
   /* fa-hands-helping */
-  display: inline-block;
+  display: flex;
   font-family: "Font Awesome 5 Free";
   color: white;
   font-size: 12px;
   font-weight: 900;
   content: "";
-  text-align: center;
   flex: 100%;
   width: 15px;
   padding-right: 3px;
@@ -185,7 +180,7 @@ body {
 }
 
 .loading span:nth-of-type(1) {
-  animation: borderspin-1 1.5s linear infinite, bordercolor 3s linear infinite;
+  animation: borderspin-1 1.5s linear infinite, hideloader 3s linear;
   display: block;
   width: 100%;
   height: 100%;
@@ -193,7 +188,6 @@ body {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  line-height: 150px;
   border-top: 5px solid #FF79DA;
   top: 50%;
   left: 50%;
@@ -201,7 +195,7 @@ body {
 }
 
 .loading span:nth-of-type(2) {
-  animation: borderspin-2 1.5s linear infinite, bordercolor 3s linear infinite;
+  animation: borderspin-2 1.5s linear infinite, hideloader 3s linear;
   display: block;
   width: 100%;
   height: 100%;
@@ -209,7 +203,6 @@ body {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  line-height: 150px;
   border-top: 5px solid #9356DC;
   top: 50%;
   left: 50%;
@@ -217,7 +210,7 @@ body {
 }
 
 .loading span:nth-of-type(3) {
-  animation: borderspin-3 1.5s linear infinite, bordercolor 3s linear infinite;
+  animation: borderspin-3 1.5s linear infinite, hideloader 3s linear;
   display: block;
   width: 100%;
   height: 100%;
@@ -225,7 +218,6 @@ body {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  line-height: 150px;
   border-top: 5px solid #99E2D0;
   top: 50%;
   left: 50%;
@@ -236,7 +228,6 @@ body {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  line-height: 150px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -253,58 +244,58 @@ body {
 }
 
 .loading svg path:nth-of-type(1) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 100ms;
 }
 
 .loading svg path:nth-of-type(2) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 200ms;
 }
 
 .loading svg path:nth-of-type(3) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 300ms;
 }
 
 .loading svg path:nth-of-type(4) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 400ms;
 }
 
 .loading svg path:nth-of-type(5) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 500ms;
 }
 
 .loading svg path:nth-of-type(6) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 600ms;
 }
 
 .loading svg path:nth-of-type(7) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 700ms;
 }
 
 .loading svg path:nth-of-type(8) {
-  fill: #FF79DA;
+  fill: black;
   transform-origin: center;
-  animation: color 3s linear infinite;
+  animation: hideloader 3s linear, color 3s linear infinite;
   animation-delay: 800ms;
 }
 
@@ -371,6 +362,7 @@ body {
   padding: 17px;
   color: #353535;
   background: #eaeaea;
+  box-shadow: inset 0px 10px 5px -10px rgba(0, 0, 0, 0.25);
 }
 
 .place__title {
@@ -383,17 +375,15 @@ body {
 
 .place__icon::before {
   /* fa-map-marker-alt */
-  display: inline-block;
+  display: flex;
   font-family: "Font Awesome 5 Free";
   color: #353535;
   font-size: 1em;
   font-weight: 900;
   content: "";
-  text-align: center;
+  display: initial;
   position: absolute;
-  top: 50%;
-  transform: translate(-250%, -50%);
-  vertical-align: middle;
+  margin-left: -25px;
 }
 
 .desc {
@@ -414,14 +404,11 @@ body {
 
 .desc__btn {
   color: white;
-}
-
-.op {
-  padding: 50px 0 60px 0;
-  margin: 0 20px 0 20px;
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
 }
 
 .op__title {
+  width: 100%;
   padding: 0 0 30px 0;
   font-size: 1.40em;
   font-weight: 600;
@@ -432,28 +419,20 @@ body {
   position: relative;
   left: 12px;
   margin-right: 12px;
-}
-
-.op li:not(:last-of-type) {
-  margin-bottom: 24px;
+  border-radius: 18px;
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
 }
 
 .op li::before {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   content: counter(incrementation);
   font-size: 0.8em;
   color: white;
   position: absolute;
   left: -12px;
   background: #9356DC;
-  top: 50%;
-  transform: translate(0, -50%);
-  vertical-align: middle;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
 }
 
 .op span {
@@ -471,56 +450,56 @@ body {
 }
 
 .op__mobile::before {
-  /* fa-mobile-alt */
-  display: inline-block;
+  display: flex;
   font-family: "Font Awesome 5 Free";
   color: #7e7e7e;
   font-size: 20px;
   font-weight: 900;
   content: "";
-  text-align: center;
   padding-left: 12px;
   flex: 100%;
-  line-height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20%;
 }
 
 .op__list::before {
-  /* fa-list-ul */
-  display: inline-block;
+  display: flex;
   font-family: "Font Awesome 5 Free";
   color: #7e7e7e;
   font-size: 18px;
   font-weight: 900;
   content: "";
-  text-align: center;
   padding-left: 12px;
   flex: 100%;
-  line-height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20%;
 }
 
 .op__store::before {
-  /* fa-store */
-  display: inline-block;
+  display: flex;
   font-family: "Font Awesome 5 Free";
   color: #7e7e7e;
   font-size: 16px;
   font-weight: 900;
   content: "";
-  text-align: center;
   padding-left: 12px;
   flex: 100%;
-  line-height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20%;
 }
 
 .restaurants {
   background: #f6f6f6;
-  padding: 40px 20px 55px 20px;
 }
 
 .restaurants h2 {
+  flex: 100%;
   padding: 0 0 30px 0;
   font-size: 1.40em;
   font-weight: 600;
@@ -530,40 +509,35 @@ body {
   background: white;
   border-radius: 15px;
   position: relative;
-}
-
-.card:not(:last-of-type) {
-  margin: 0 0 18px 0;
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
 }
 
 .card--badge::after {
   content: 'Nouveau';
-  font-size: 0.83em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.87em;
   font-weight: 500;
   margin: 13px;
   height: 29px;
   width: 79px;
-  text-align: center;
-  line-height: 29px;
-  font-size: 0.9em;
   border-radius: 2px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #008766;
   top: 0;
   right: 0;
   position: absolute;
 }
 
-.card .card__img {
-  height: 174px;
-  position: relative;
-}
-
-.card .card__img img {
+.card img {
   border-radius: 15px 15px 0 0;
-  height: 174px;
   object-fit: cover;
   width: 100%;
+}
+
+.card .card__img {
+  position: relative;
 }
 
 .card__desc {
@@ -618,6 +592,118 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 599px) {
+  .op {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 50px 0 60px 0;
+    margin: 0 20px 0 20px;
+  }
+  .op li::before {
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+  }
+  .op li:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+  .op span {
+    align-content: baseline;
+  }
+  .restaurants {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 40px 20px 55px 20px;
+  }
+  .card:not(:last-of-type) {
+    margin: 0 0 18px 0;
+  }
+  img {
+    height: 174px;
+  }
+  .card__img {
+    height: 174px;
+  }
+}
+
+@media (min-width: 600px) {
+  .restaurants {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .card {
+    width: 49%;
+    margin: 0 0 18px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .op {
+    margin: 0 60px 0 60px;
+  }
+  .op__incr {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .op li {
+    flex: 1;
+    height: 80px;
+    left: 0;
+    margin-right: 0;
+  }
+  .op li::before {
+    top: 0;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .op span {
+    height: 80px;
+    align-content: center;
+  }
+  .op__mobile::before {
+    width: 0;
+    margin-right: 250px;
+    position: absolute;
+  }
+  .op__list::before {
+    width: 0;
+    margin-right: 250px;
+    position: absolute;
+  }
+  .op__store::before {
+    width: 0;
+    margin-right: 250px;
+    position: absolute;
+  }
+  .restaurants {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 40px 60px 55px 60px;
+  }
+  .card {
+    width: 49%;
+    margin: 0 0 18px 0;
+  }
+  img {
+    height: 350px;
+  }
+  .card__img {
+    height: 350px;
+  }
+}
+
 .intro {
   height: 221px;
 }
@@ -652,6 +738,7 @@ body {
 
 .restaurant .order__btn button {
   width: 55%;
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
 }
 
 .restaurant__title {
@@ -699,6 +786,7 @@ body {
   background: white;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
   /*input:hover + label {
         width: 68px;
     }*/
@@ -795,11 +883,9 @@ body {
   color: #99E2D0;
   top: 50%;
   transform: translate(0, 100%);
-  vertical-align: middle;
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  line-height: 24px;
 }
 
 .menu:nth-of-type(2) {
