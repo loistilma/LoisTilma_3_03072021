@@ -3,8 +3,13 @@ $rounded-border : 15px;
 $rounded-top : 15px 15px 0 0;
 $rounded-bottom : 0 0 15px 15px;
 
-@mixin absolute-center($x, $y) {
-    top: 50%;
+@mixin transform-center($top, $x, $y) {
+    top: $top;
     transform: translate($x, $y);
-    vertical-align: middle;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

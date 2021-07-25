@@ -11,8 +11,7 @@
     &__back::before {
         /* fa-arrow-left */
         @include content-icon(900, #353535, 0.7em, "\f060");
-        @include absolute-center(0, -50%);
+        @include transform-center(50%, 0, -50%);
         position: absolute;
-        left: 0;
     }
 }

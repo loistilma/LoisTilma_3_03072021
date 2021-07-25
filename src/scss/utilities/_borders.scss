@@ -1,0 +1,12 @@
+@function add-string($string) {
+    @if $string != '' {
+        @return $string;
+    }
+    @else {
+        @return null;
+    }
+}
+
+@mixin box-shadow($string, $shift-right, $shift-down, $blur, $spread) {
+    box-shadow: add-string($string) $shift-right $shift-down $blur $spread rgba(0,0,0,0.25);
+}

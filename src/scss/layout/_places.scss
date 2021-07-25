@@ -2,6 +2,7 @@
     padding: 17px;
     color: $light-black;
     background: #eaeaea;
+    @include box-shadow(inset, 0px, 10px, 5px, -10px);
 
     &__title {
         display: block;     
@@ -14,8 +15,9 @@
     &__icon::before {
         /* fa-map-marker-alt */
         @include content-icon(900, $light-black, 1em, "\f3c5");
+        display: initial;        
         position: absolute;
-        @include absolute-center(-250%, -50%);
+        margin-left: -25px;
     }
 
 }

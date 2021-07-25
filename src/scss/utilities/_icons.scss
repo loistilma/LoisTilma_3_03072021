@@ -1,16 +1,14 @@
 @mixin content-icon($weight, $color, $size, $code) {
-    display: inline-block;
+    display: flex;
     font-family: "Font Awesome 5 Free";
     color: $color;
     font-size: $size;
     font-weight: $weight;
     content: $code;
-    text-align: center;
 }
 
 @mixin circle-border($pixel) {
     border-radius: 50%;
     width: $pixel;
     height: $pixel;
-    line-height: $pixel;
 }
