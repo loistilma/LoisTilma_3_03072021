@@ -1,3 +1,17 @@
 @import '../layout/intro';
 @import '../layout/menus';
 @import '../layout/dishes';
+
+@include for-size(phone-only) {
+    @include menu--sm();
+}
+
+@include for-size(tablet-portrait-up) {
+    @include container--md();
+    @include restaurant--md();
+    @include menu--md();
+}
+
+@include for-size(desktop-up) {
+    @include container--xl();
+}

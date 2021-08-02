@@ -17,3 +17,51 @@
     }
   }
 
+$gutter-X: 1em;
+$gutter-Y: 1em;
+
+.container {
+  width: 100%;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+[class^=grid-] {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: calc(#{$gutter-X} * -.5);
+  margin-left: calc(#{$gutter-X} * -.5);
+}
+
+@mixin flex-grid($n-grid) {
+
+  .grid-#{$n-grid} > * {
+    flex: 0 0 auto;
+    width: calc(100% / #{$n-grid});
+    padding-right: calc(#{$gutter-X} * .5);
+    padding-left: calc(#{$gutter-X} * .5);
+    padding-top: calc(#{$gutter-Y} * .5);
+    padding-bottom: calc(#{$gutter-Y} * .5);
+  }
+
+}
+
+@include flex-grid(1);
+
+@mixin container--md() {
+
+  .container {
+    width: 85%;
+  }
+
+}
+
+@mixin container--xl() {
+  
+  .container {
+    width: 90%;
+  }
+
+}

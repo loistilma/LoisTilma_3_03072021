@@ -1,7 +1,8 @@
 footer {
     background: $light-black;
     color: white;
-    padding: 20px 20px 30px 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 
     h4 {
         padding-bottom: 20px;
@@ -11,53 +12,58 @@ footer {
         color: white;
     }
 
-    &__list {
-        display: flex;
-        flex-flow:column wrap;
-    }
     li:not(:first-of-type):not(:nth-of-type(2)) {
         font-size: 0.97em;
         font-weight: 400;
     }
-    li:not(:last-of-type) {
-        margin-bottom: 10px;
-    }
+
 }
 
 .footer__set {
     display: flex;
-    flex-flow: column wrap;
-    align-content: baseline;
-    height: 15px;
-    line-height: 15px;
+    flex-flow: row wrap;
     font-size: 0.97em;
     font-weight: 500;
 
     &::before {
         /* fa-utensils */
-        @include content-icon(900, white, 13px, "\f2e7");
-        flex: 100%;
-        width: 15px;
-        padding-right: 3px;
+        @include content-icon(900, white, 0.8, 0.8, "\f2e7");
+        width: 25px;
         text-align: inherit;
     }
 }
 
 .footer__help {
     display: flex;
-    flex-flow: column wrap;
-    align-content: baseline;
-    height: 15px;
-    line-height: 15px;
+    flex-flow: row wrap;
     font-size: 0.97em;
     font-weight: 500;
 
     &::before {
         /* fa-hands-helping */
-        @include content-icon(900, white, 12px, "\f4c4");
-        flex: 100%;
-        width: 15px;
-        padding-right: 3px;
+        @include content-icon(900, white, 0.7, 0.8, "\f4c4");
+        width: 25px;
         text-align: inherit;
+    }
+}
+
+@mixin footer--md {
+    @include flex-grid(2);
+    footer ul {
+
+
+        li:nth-of-type(1) {
+            order: 1;
+        }
+        li:nth-of-type(2) {
+            order: 3;
+        }
+        li:nth-of-type(3) {
+            order: 2;
+        }
+        li:nth-of-type(4) {
+            order: 4;
+        }
+
     }
 }

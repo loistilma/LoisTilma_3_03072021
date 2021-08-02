@@ -1,8 +1,8 @@
-@mixin content-icon($weight, $color, $size, $code) {
+@mixin content-icon($weight, $color, $scaleX, $scaleY, $code) {
     display: flex;
     font-family: "Font Awesome 5 Free";
     color: $color;
-    font-size: $size;
+    transform: scale($scaleX, $scaleY);
     font-weight: $weight;
     content: $code;
 }
