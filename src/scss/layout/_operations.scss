@@ -1,10 +1,13 @@
 $op-icons: 
-    "__mobile" "\f3cd" 20px, 
-    "__list" "\f0ca" 18px, 
-    "__store" "\f54e" 16px;
+    "__mobile" "\f3cd" 1.25 1.2 #7e7e7e, 
+    "__list" "\f0ca" 1 1.2 #7e7e7e, 
+    "__store" "\f54e" 0.9 1.1 $purple;
 
 .op {
- 
+    //padding: 50px 0 60px 0;
+    padding-top: 50px;
+    padding-bottom: 60px;
+
     &__title {
         width: 100%;
         padding: 0 0 30px 0;
@@ -12,48 +15,61 @@ $op-icons:
         font-weight: 600;
     }
 
-    li {
-        counter-increment: incrementation;
-        position: relative;
+    ol {
         left: 12px;
-        margin-right: 12px;
-        border-radius: 18px;
-        @include box-shadow('', 0px, 5px, 10px, -2px);      
     }
 
-    li::before {
+    li {
+        counter-increment: incrementation;
+    }
+
+    &__ol {
+        display: flex;
+        align-items: baseline; 
+        background: $grey;
+        border-radius: 18px;
+        position: relative;
+        height: 72px;
+        @include box-shadow('', 0px, 5px, 10px, -2px, 0.25);      
+    }
+
+    li:last-of-type > &__ol {
+        background: $light-pink;
+    }
+
+    &__ol::before {
         display: flex;
         justify-content: center;
         align-items: center;
         content: counter(incrementation);
+        @include transform-center(50%, 0, -50%);
+        @include circle-border(24px);
         font-size: 0.8em;
         color: white;
         position: absolute;
         left: -12px;
         background: $purple;
+
     }
 
-    span {
-        display: flex;
-        flex-flow: column wrap;
-        height: 72px;
-        width: 100%;
-        background: $grey;
-        border-radius: 18px;
+    span:nth-of-type(1) {
+        width: 25%;
+        height: 100%;
+    }
+
+    span:nth-of-type(2) {
+        display: block;
         font-size: 1em;
-        justify-content: center;
-        align-content: baseline;
         font-size: 0.98em;
         font-weight: 500;
     }
     
-    @each $name, $icon, $icon-size  in $op-icons {
+    @each $name, $icon, $icon-scaleX, $icon-scaleY, $icon-color in $op-icons {
         &#{$name}::before {
-            @include content-icon(900, #7e7e7e, $icon-size, $icon);
-            padding-left: 12px;
-            flex: 100%;
+            @include content-icon(900, $icon-color, $icon-scaleX, $icon-scaleY, $icon);
             @include flex-center;
-            width: 20%;            
+            width: 100%;
+            height: 100%;
         }
       }
 
@@ -61,71 +77,50 @@ $op-icons:
 
 @mixin op--sm() {
     .op {
-        display: flex;
-        flex-flow: column wrap;
-        padding: 50px 0 60px 0;
-        margin: 0 20px 0 20px;
-
-        li::before {
-            @include transform-center(50%, 0, -50%);
-            @include circle-border(24px);
+        
+        li {
+            margin-left: 12px;
+            padding-right: calc(12px * 1.5);
         }
 
-        li:not(:last-of-type) {
-            margin-bottom: 24px;
-        }
-
-        span {
-            align-content: baseline;
-        }
     }
 }
 
 @mixin op--md() {
     .op {
-        padding: 50px 0 60px 0;
-        margin: 0 20px 0 20px;  
+        @include flex-grid(3);
+        &__ol {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__ol::before {
+            @include circle-border(30px);
+            top: 0;
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        span:nth-of-type(1) {
+            position: absolute;
+            left: 0;
+        }
+        span:nth-of-type(2) {
+            padding-right: 20%;
+            padding-left: 20%;
+            text-align: center;
+        }
     }
 }
 
 @mixin op--xl() {
     .op {
-        margin: 0 60px 0 60px;
-        &__incr {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-        }
 
-        li {
-            flex: 1;
+        &__ol {
             height: 80px;
-            left: 0;
-            margin-right: 0;
         }
 
-        li::before {
-            @include transform-center(0, 0, -50%);
-            @include circle-border(35px);
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        span {
-            height: 80px;
-            align-content: center;
-        }
-
-        @each $name, $icon, $icon-size  in $op-icons {
-            &#{$name}::before {
-                width: 0;
-                margin-right: 250px;
-                position: absolute;        
-            }
-        }
     }
 }

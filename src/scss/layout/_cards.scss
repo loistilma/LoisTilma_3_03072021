@@ -1,5 +1,8 @@
 .restaurants {
     background: $grey;
+    padding-top: 40px;
+    padding-bottom: 55px;
+
     h2 {
         flex: 100%;
         padding: 0 0 30px 0;
@@ -12,7 +15,7 @@
     background: white;
     border-radius: $rounded-border;
     position: relative;
-    @include box-shadow('', 0px, 5px, 10px, -2px); 
+    @include box-shadow('', 0px, 5px, 10px, -2px, 0.25); 
 
     &--badge::after {
         content: 'Nouveau';
@@ -35,11 +38,13 @@
     img {
         border-radius: $rounded-top;
         object-fit: cover;
+        height: 174px;
         width: 100%;
     }
 
     .card__img {
-        position: relative; 
+        position: relative;
+        height: 174px;
     }
 
     &__desc {
@@ -71,16 +76,47 @@
 
     &__like {
         z-index: 2;
+        position: relative;
+
         input {
-            display: none
+            display: none;
+            
         }
 
         .fa-heart {
             font-size: 25px;
+            font-weight: 400;
+        }
+        .fa-heart::before {
+            font-size: 25px;
+            font-weight: 400;
+            opacity: 1;
+            transition: all 250ms ease-in-out;
+        }
+        .fa-heart::after {
+            content: "\f004";
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; 
+            font-weight: 900; 
+            background-image: $invert-gradient;
+            position: absolute;
+            right: 0;
+            transform: scale(0);
+            opacity: 0.3;
+            transition: all 250ms ease-in-out;
         }
 
         input:checked + .fa-heart {
-            font-weight: 900;
+
+            &::before {
+            opacity: 0;
+            }
+
+            &::after {
+            transform: scale(1);
+            opacity: 1;
+            }
         }
     }
 
@@ -95,64 +131,22 @@
 
 }
 
-@mixin restaurants--sm() {
-    .restaurants {
-        display: flex;
-        flex-flow: column wrap;
-        padding: 40px 20px 55px 20px;
-    } 
-}
-
-@mixin restaurants--md() {
-    .restaurants {
-        display: flex;
-        flex-flow: column wrap;
-    }
-}
-
-@mixin restaurants--xl() {
-    .restaurants {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding: 40px 60px 55px 60px;
-    }
-}
-
-@mixin card--sm() {
-    .card {
-        &:not(:last-of-type) {
-            margin: 0 0 18px 0;   
-        }
-    }
-
-    img {
-        height: 174px;
-    }
-
-    .card__img {
-        height: 174px;
-    }
-
-}
-
 @mixin card--md() {
-    .card {
-        width: 49%;
-        margin: 0 0 18px 0;
+    .restaurants {
+        @include flex-grid(2);
     }
-
 }
 
 @mixin card--xl() {
+    .restaurants {
+        @include flex-grid(4);
+    }
     .card {
-        width: 49%;
-        margin: 0 0 18px 0;
-    }
-    img {
-        height: 350px; 
-    }
-    .card__img {
-        height: 350px;
+        img {
+            height: 330px; 
+        }
+        .card__img {
+            height: 330px;
+        }
     }
 }

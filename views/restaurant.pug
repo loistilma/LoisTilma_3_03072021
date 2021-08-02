@@ -1,64 +1,69 @@
 extends layout
 block header
-  header
-    nav(class='nav')
-      h1: a(class='nav__back nav__title' href='/#restaurants')= title
+  header(class='header')
+    div(class='container')
+      div(class='grid-1')
+        a(class='header__back' href='/#restaurants')
+          span(class='fas fa-arrow-left')
+        h1(class='header__title')= title
 block content
-    div(class='intro')
-        img(src= restaurant.imgUrl, alt=restaurant.title)
-    section(class='restaurant')
+  div(class='intro')
+      img(src= restaurant.imgUrl, alt=restaurant.title)
+  section(class='restaurant')
+    div(class='container')
       div(class='restaurant__title')
-        h2(class='')= restaurant.title
-        div(class='restaurant__like')
+        h2= restaurant.title
+        div(class='card__like')
           input(type='checkbox', id='like')
           label(for='like', class='far fa-heart')
-      div(class='menu')
-        h3(class='dish--border') ENTRÉES
-        - var n = 0;
-        each val in restaurant.starter
-          - n++
-          div(class='dish__box delay-' + n)
-            div(class='dish__desc')
-              p= val.name
-              p= val.desc
-            div(class='dish__price')
-              span= val.price
-            input(type='checkbox', id='checked-'+ n)
-            label(for='checked-'+ n class='order')
-              span(class='order__box')
-                span(class='order__check')
-                  span(class='fas fa-check')
+      div(class='grid-1 grid-3')
+        div(class='menu')
+          h3(class='dish--border') ENTRÉES
+          - var n = 0;
+          each val in restaurant.starter
+            - n++
+            div(class='dish__box delay-' + n)
+              div(class='dish__desc')
+                p= val.name
+                p= val.desc
+              div(class='dish__price')
+                span= val.price
+              input(type='checkbox', id='checked-'+ n)
+              label(for='checked-'+ n class='order')
+                span(class='order__box')
+                  span(class='order__check')
+                    span(class='fas fa-check')
 
-      div(class='menu')
-        h3(class='dish--border') PLATS
-        each val in restaurant.main
-          - n++
-          div(class='dish__box delay-' + n)
-            div(class='dish__desc')
-              p= val.name
-              p= val.desc
-            div(class='dish__price')
-              span= val.price
-            input(type='checkbox', id='checked-'+ n)
-            label(for='checked-'+ n class='order')
-              span(class='order__box')
-                span(class='order__check')
-                  span(class='fas fa-check')
+        div(class='menu')
+          h3(class='dish--border') PLATS
+          each val in restaurant.main
+            - n++
+            div(class='dish__box delay-' + n)
+              div(class='dish__desc')
+                p= val.name
+                p= val.desc
+              div(class='dish__price')
+                span= val.price
+              input(type='checkbox', id='checked-'+ n)
+              label(for='checked-'+ n class='order')
+                span(class='order__box')
+                  span(class='order__check')
+                    span(class='fas fa-check')
 
-      div(class='menu')
-        h3(class='dish--border') DESSERTS
-        each val in restaurant.dessert
-          - n++
-          div(class='dish__box delay-' + n)
-            div(class='dish__desc')
-              p= val.name
-              p= val.desc
-            div(class='dish__price')
-              span= val.price
-            input(type='checkbox', id='checked-'+ n)
-            label(for='checked-'+ n class='order')
-              span(class='order__box')
-                span(class='order__check')
-                  span(class='fas fa-check')
-      div(class='order__btn')
-        button Commander
+        div(class='menu')
+          h3(class='dish--border') DESSERTS
+          each val in restaurant.dessert
+            - n++
+            div(class='dish__box delay-' + n)
+              div(class='dish__desc')
+                p= val.name
+                p= val.desc
+              div(class='dish__price')
+                span= val.price
+              input(type='checkbox', id='checked-'+ n)
+              label(for='checked-'+ n class='order')
+                span(class='order__box')
+                  span(class='order__check')
+                    span(class='fas fa-check')
+
+      button Commander

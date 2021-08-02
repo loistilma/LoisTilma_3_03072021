@@ -1,5 +1,7 @@
-.nav {
-    padding: 21px 23px 14px 23px;
+.header {
+    height: 70px;
+    display: flex;
+    align-items: center;
 
     &__title {
         color: black;    
@@ -8,10 +10,16 @@
         font-size: 1.8em;
     }
 
-    &__back::before {
-        /* fa-arrow-left */
-        @include content-icon(900, #353535, 0.7em, "\f060");
-        @include transform-center(50%, 0, -50%);
+    &__back {
         position: absolute;
+        font-size: 1.2em;
+        color: $light-black;
+        width: 1em;
+        z-index: 1;
     }
+}
+
+header > .container > .grid-1 {
+    position: relative;
+    align-items: center;
 }

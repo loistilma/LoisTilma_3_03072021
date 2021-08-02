@@ -4,19 +4,21 @@
 @import '../layout/operations';
 @import '../layout/cards';
 
+
 @include for-size(phone-only) {
     @include op--sm();
-    @include restaurants--sm();
-    @include card--sm();
 }
 
 @include for-size(tablet-portrait-up) {
-    @include restaurants--md();
-    @include card--md();
+    @include container--md;
+    @include op--md;
+    @include card--md;
+    @include footer--md;    
 }
 
 @include for-size(desktop-up) {
-    @include op--xl();
-    @include restaurants--xl();
-    @include card--xl();
+    @include container--xl;
+    @include op--xl;
+    @include card--xl;
+
 }

@@ -1,8 +1,15 @@
-/* Include partials */
+/* Include base */
 @import 'base/responsive';
 @import 'base/reset';
 @import 'base/typography';
-@import 'imports';
+/* Include utilities */
+@import 'components/animations';
+@import 'components/buttons';
+@import 'utilities/borders';
+@import 'utilities/colors';
+@import 'utilities/icons';
+@import 'utilities/position';
+/* Include pages */
 @import 'base/header';
 @import 'base/footer';
 @import 'pages/home';

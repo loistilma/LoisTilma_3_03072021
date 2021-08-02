@@ -1,8 +1,10 @@
 .place {
-    padding: 17px;
+    //padding: 17px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     color: $light-black;
     background: #eaeaea;
-    @include box-shadow(inset, 0px, 10px, 5px, -10px);
+    @include box-shadow(inset, 0px, 10px, 5px, -10px, 0.25);
 
     &__title {
         display: block;     
@@ -14,7 +16,7 @@
 
     &__icon::before {
         /* fa-map-marker-alt */
-        @include content-icon(900, $light-black, 1em, "\f3c5");
+        @include content-icon(900, $light-black, 1, 1, "\f3c5");
         display: initial;        
         position: absolute;
         margin-left: -25px;

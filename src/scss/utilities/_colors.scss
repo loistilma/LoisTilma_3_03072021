@@ -1,4 +1,3 @@
-
 $purple: #9356DC;
 $pink: #FF79DA;
 $light-pink: #f5edff;
@@ -9,4 +8,4 @@ $light-black: #353535;
 
 $gradient: linear-gradient(175deg, $pink 20%, $purple 100%);
 $invert-gradient: linear-gradient(360deg, $pink 20%, $purple 100%);
-$lighten-gradient: linear-gradient(175deg, lighten($pink, 5%) 20%, lighten($purple, 5%) 100%);
+$lighten-gradient: linear-gradient(175deg, lighten($pink, 2.5%) 20%, lighten($purple, 2.5%) 100%);

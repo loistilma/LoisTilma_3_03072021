@@ -9,127 +9,131 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <h1><a class="nav__back nav__title" href="/loistilma_3_03072021#restaurants">ohmyfood</a></h1>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <div class="grid-1"><a class="header__back" href="/loistilma_3_03072021#restaurants"><span class="fas fa-arrow-left"></span></a>
+          <h1 class="header__title">ohmyfood</h1>
+        </div>
+      </div>
     </header>
     <div class="intro"><img src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée"></div>
     <section class="restaurant">
-      <div class="restaurant__title">
-        <h2>La note enchantée</h2>
-        <div class="restaurant__like">
-          <input type="checkbox" id="like">
-          <label class="far fa-heart" for="like"></label>
-        </div>
-      </div>
-      <div class="menu">
-        <h3 class="dish--border">ENTRÉES</h3>
-        <div class="dish__box delay-1">
-          <div class="dish__desc">
-            <p>Ravioles de foie gras</p>
-            <p>Accompagnés de leur crème à la truffe</p>
+      <div class="container">
+        <div class="restaurant__title">
+          <h2>La note enchantée</h2>
+          <div class="card__like">
+            <input type="checkbox" id="like">
+            <label class="far fa-heart" for="like"></label>
           </div>
-          <div class="dish__price"><span>25€</span></div>
-          <input type="checkbox" id="checked-1">
-          <label class="order" for="checked-1"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
         </div>
-        <div class="dish__box delay-2">
-          <div class="dish__desc">
-            <p>Caviar osciètre</p>
-            <p>Sur blini à la farine de blé noir</p>
+        <div class="grid-1 grid-3">
+          <div class="menu">
+            <h3 class="dish--border">ENTRÉES</h3>
+            <div class="dish__box delay-1">
+              <div class="dish__desc">
+                <p>Ravioles de foie gras</p>
+                <p>Accompagnés de leur crème à la truffe</p>
+              </div>
+              <div class="dish__price"><span>25€</span></div>
+              <input type="checkbox" id="checked-1">
+              <label class="order" for="checked-1"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
+            <div class="dish__box delay-2">
+              <div class="dish__desc">
+                <p>Caviar osciètre</p>
+                <p>Sur blini à la farine de blé noir</p>
+              </div>
+              <div class="dish__price"><span>35€</span></div>
+              <input type="checkbox" id="checked-2">
+              <label class="order" for="checked-2"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
+            <div class="dish__box delay-3">
+              <div class="dish__desc">
+                <p>Homard et espuma de potiron</p>
+                <p>Mariné aux zestes d'orange</p>
+              </div>
+              <div class="dish__price"><span>20€</span></div>
+              <input type="checkbox" id="checked-3">
+              <label class="order" for="checked-3"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
+            <div class="dish__box delay-4">
+              <div class="dish__desc">
+                <p>Foie gras de canard cuit entier</p>
+                <p>Confiture de figue et pain toasté</p>
+              </div>
+              <div class="dish__price"><span>35€</span></div>
+              <input type="checkbox" id="checked-4">
+              <label class="order" for="checked-4"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
           </div>
-          <div class="dish__price"><span>35€</span></div>
-          <input type="checkbox" id="checked-2">
-          <label class="order" for="checked-2"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-        <div class="dish__box delay-3">
-          <div class="dish__desc">
-            <p>Homard et espuma de potiron</p>
-            <p>Mariné aux zestes d'orange</p>
+          <div class="menu">
+            <h3 class="dish--border">PLATS</h3>
+            <div class="dish__box delay-5">
+              <div class="dish__desc">
+                <p>Noix de coquilles Saint-Jacques</p>
+                <p>Sur lit de purée de céleri-rave</p>
+              </div>
+              <div class="dish__price"><span>40€</span></div>
+              <input type="checkbox" id="checked-5">
+              <label class="order" for="checked-5"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
+            <div class="dish__box delay-6">
+              <div class="dish__desc">
+                <p>Langoustine poêlée</p>
+                <p>Purée de patate douce</p>
+              </div>
+              <div class="dish__price"><span>35€</span></div>
+              <input type="checkbox" id="checked-6">
+              <label class="order" for="checked-6"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
+            <div class="dish__box delay-7">
+              <div class="dish__desc">
+                <p>Mijoté de queue de boeuf</p>
+                <p>Et riz sauvage aux zestes de citron</p>
+              </div>
+              <div class="dish__price"><span>44€</span></div>
+              <input type="checkbox" id="checked-7">
+              <label class="order" for="checked-7"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
           </div>
-          <div class="dish__price"><span>20€</span></div>
-          <input type="checkbox" id="checked-3">
-          <label class="order" for="checked-3"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-        <div class="dish__box delay-4">
-          <div class="dish__desc">
-            <p>Foie gras de canard cuit entier</p>
-            <p>Confiture de figue et pain toasté</p>
+          <div class="menu">
+            <h3 class="dish--border">DESSERTS</h3>
+            <div class="dish__box delay-8">
+              <div class="dish__desc">
+                <p>Macaron noisette et chocolat</p>
+                <p>Glace au caramel brun et sel de Guérande</p>
+              </div>
+              <div class="dish__price"><span>18€</span></div>
+              <input type="checkbox" id="checked-8">
+              <label class="order" for="checked-8"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
+            <div class="dish__box delay-9">
+              <div class="dish__desc">
+                <p>Baba au rhum revisité</p>
+                <p>Avec son coulis de citron</p>
+              </div>
+              <div class="dish__price"><span>22€</span></div>
+              <input type="checkbox" id="checked-9">
+              <label class="order" for="checked-9"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
+            <div class="dish__box delay-10">
+              <div class="dish__desc">
+                <p>Tarte au citron meringuée</p>
+                <p>Déstructurée</p>
+              </div>
+              <div class="dish__price"><span>23€</span></div>
+              <input type="checkbox" id="checked-10">
+              <label class="order" for="checked-10"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
+            </div>
           </div>
-          <div class="dish__price"><span>35€</span></div>
-          <input type="checkbox" id="checked-4">
-          <label class="order" for="checked-4"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
         </div>
-      </div>
-      <div class="menu">
-        <h3 class="dish--border">PLATS</h3>
-        <div class="dish__box delay-5">
-          <div class="dish__desc">
-            <p>Noix de coquilles Saint-Jacques</p>
-            <p>Sur lit de purée de céleri-rave</p>
-          </div>
-          <div class="dish__price"><span>40€</span></div>
-          <input type="checkbox" id="checked-5">
-          <label class="order" for="checked-5"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-        <div class="dish__box delay-6">
-          <div class="dish__desc">
-            <p>Langoustine poêlée</p>
-            <p>Purée de patate douce</p>
-          </div>
-          <div class="dish__price"><span>35€</span></div>
-          <input type="checkbox" id="checked-6">
-          <label class="order" for="checked-6"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-        <div class="dish__box delay-7">
-          <div class="dish__desc">
-            <p>Mijoté de queue de boeuf</p>
-            <p>Et riz sauvage aux zestes de citron</p>
-          </div>
-          <div class="dish__price"><span>44€</span></div>
-          <input type="checkbox" id="checked-7">
-          <label class="order" for="checked-7"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-      </div>
-      <div class="menu">
-        <h3 class="dish--border">DESSERTS</h3>
-        <div class="dish__box delay-8">
-          <div class="dish__desc">
-            <p>Macaron noisette et chocolat</p>
-            <p>Glace au caramel brun et sel de Guérande</p>
-          </div>
-          <div class="dish__price"><span>18€</span></div>
-          <input type="checkbox" id="checked-8">
-          <label class="order" for="checked-8"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-        <div class="dish__box delay-9">
-          <div class="dish__desc">
-            <p>Baba au rhum revisité</p>
-            <p>Avec son coulis de citron</p>
-          </div>
-          <div class="dish__price"><span>22€</span></div>
-          <input type="checkbox" id="checked-9">
-          <label class="order" for="checked-9"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-        <div class="dish__box delay-10">
-          <div class="dish__desc">
-            <p>Tarte au citron meringuée</p>
-            <p>Déstructurée</p>
-          </div>
-          <div class="dish__price"><span>23€</span></div>
-          <input type="checkbox" id="checked-10">
-          <label class="order" for="checked-10"><span class="order__box"><span class="order__check"><span class="fas fa-check"></span></span></span></label>
-        </div>
-      </div>
-      <div class="order__btn">
         <button>Commander</button>
       </div>
     </section>
     <footer>
-      <div>
+      <div class="container">
         <h4 class="footer__title">ohmyfood</h4>
-        <ul class="footer__list">
+        <ul class="grid-1 grid-2">
           <li><span class="footer__set">Proposer un restaurant</span></li>
           <li><span class="footer__help">Devenir partenaire</span></li>
           <li>Mentions légales</li>
