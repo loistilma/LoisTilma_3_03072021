@@ -1,0 +1,25 @@
+.logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    &__text {
+        color: black;    
+        text-align: center;
+        position: relative;
+        font-size: 1.8em;
+    }
+
+    &__back {
+        position: absolute;
+        font-size: 1.2em;
+        color: $light-black;
+        width: 1em;
+        z-index: 1;
+    }
+}
+
+header > .container > .grid-1 {
+    position: relative;
+    align-items: center;
+}

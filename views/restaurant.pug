@@ -1,11 +1,11 @@
 extends layout
 block header
-  header(class='header')
-    div(class='container')
+  header(class='logo')
+    nav(class='container')
       div(class='grid-1')
-        a(class='header__back' href='/#restaurants')
+        a(class='logo__back' href='/#restaurants')
           span(class='fas fa-arrow-left')
-        h1(class='header__title')= title
+        h1(class='logo__text')= title
 block content
   div(class='intro')
       img(src= restaurant.imgUrl, alt=restaurant.title)
@@ -18,15 +18,15 @@ block content
           label(for='like', class='far fa-heart')
       div(class='grid-1 grid-3')
         div(class='menu')
-          h3(class='dish--border') ENTRÉES
+          h3(class='menu__title') ENTRÉES
           - var n = 0;
           each val in restaurant.starter
             - n++
-            div(class='dish__box delay-' + n)
-              div(class='dish__desc')
+            div(class='menu__box delay-' + n)
+              div(class='menu__desc')
                 p= val.name
                 p= val.desc
-              div(class='dish__price')
+              div(class='menu__price')
                 span= val.price
               input(type='checkbox', id='checked-'+ n)
               label(for='checked-'+ n class='order')
@@ -35,14 +35,14 @@ block content
                     span(class='fas fa-check')
 
         div(class='menu')
-          h3(class='dish--border') PLATS
+          h3(class='menu__title') PLATS
           each val in restaurant.main
             - n++
-            div(class='dish__box delay-' + n)
-              div(class='dish__desc')
+            div(class='menu__box delay-' + n)
+              div(class='menu__desc')
                 p= val.name
                 p= val.desc
-              div(class='dish__price')
+              div(class='menu__price')
                 span= val.price
               input(type='checkbox', id='checked-'+ n)
               label(for='checked-'+ n class='order')
@@ -51,14 +51,14 @@ block content
                     span(class='fas fa-check')
 
         div(class='menu')
-          h3(class='dish--border') DESSERTS
+          h3(class='menu__title') DESSERTS
           each val in restaurant.dessert
             - n++
-            div(class='dish__box delay-' + n)
-              div(class='dish__desc')
+            div(class='menu__box delay-' + n)
+              div(class='menu__desc')
                 p= val.name
                 p= val.desc
-              div(class='dish__price')
+              div(class='menu__price')
                 span= val.price
               input(type='checkbox', id='checked-'+ n)
               label(for='checked-'+ n class='order')

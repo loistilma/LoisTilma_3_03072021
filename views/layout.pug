@@ -4,18 +4,27 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=EDGE')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    script
 
     title= pageTitle
-    
+    // Import main stylesheet
     link(rel='stylesheet', href='stylesheets/index.css')
+    // Import Google Fonts
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+    link(rel='preload', href='https://fonts.googleapis.com/css2?family=Shrikhand&display=swap', as='style')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Shrikhand&display=swap')
+    link(rel='preload', href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap', as='style')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap')
+    // Import FA
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==', crossorigin='anonymous' referrerpolicy='no-referrer')
   body
     block before-header
     block header
-      header(class='header')
-        div(class='container')
+      header(class='logo')
+        nav(class='container')
           div(class='grid-1')
-            h1(class='header__title')= title
+            h1(class='logo__text')= title
     block content
     block foot
       footer

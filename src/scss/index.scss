@@ -2,15 +2,19 @@
 @import 'base/responsive';
 @import 'base/reset';
 @import 'base/typography';
-/* Include utilities */
-@import 'components/animations';
+
+/* Include components */
 @import 'components/buttons';
-@import 'utilities/borders';
-@import 'utilities/colors';
-@import 'utilities/icons';
-@import 'utilities/position';
+
+/* Include utilities */
+@import 'utilities/functions';
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+/* Include base layout*/
+@import 'layout/header';
+@import 'layout/footer';
+
 /* Include pages */
-@import 'base/header';
-@import 'base/footer';
 @import 'pages/home';
 @import 'pages/restaurant';

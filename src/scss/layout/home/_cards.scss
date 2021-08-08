@@ -1,0 +1,154 @@
+.restaurants {
+    background: $grey;
+    padding-top: 40px;
+    padding-bottom: 55px;
+
+    h2 {
+        flex: 100%;
+        padding: 0 0 30px 0;
+        font-size: 1.40em;
+        font-weight: 600;
+    }
+}
+
+.card {
+    background: white;
+    border-radius: $rounded-border;
+    position: relative;
+    @include box-shadow('', 0px, 5px, 10px, -2px, 0.25); 
+
+    &--badge::after {
+        content: 'Nouveau';
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        font-size: 0.87em;
+        font-weight: 500;
+        margin: 13px;
+        height: 29px;
+        width: 79px;
+        border-radius: 2px;
+        background-color: $tertiary-color;
+        color: $darken-tertiary-color;
+        top: 0;
+        right: 0;        
+        position: absolute;
+    }
+
+    img {
+        border-radius: $rounded-top;
+        object-fit: cover;
+        height: 174px;
+        width: 100%;
+    }
+
+    .card__img {
+        position: relative;
+        height: 174px;
+    }
+
+    &__desc {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-between;
+        justify-content: center;
+        border-radius: $rounded-bottom;
+        height: 77px;
+        padding: 0 24px 0 14px;
+    }
+
+    &__caption {
+        flex: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        padding: 18px 0 18px 0;
+
+        h3 {
+            font-size: 1.15em;
+            font-weight: 600;    
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+
+    &__like {
+        z-index: 2;
+        position: relative;
+
+        input {
+            display: none;
+            
+        }
+
+        .fa-heart {
+            font-size: 25px;
+            font-weight: 400;
+        }
+        .fa-heart::before {
+            font-size: 25px;
+            font-weight: 400;
+            opacity: 1;
+            transition: opacity 250ms ease-in-out;
+        }
+        .fa-heart::after {
+            content: "\f004";
+            -webkit-background-clip: text;
+            //background-clip: text;
+            color: transparent; 
+            font-weight: 900; 
+            background-image: $invert-gradient;
+            position: absolute;
+            right: 0;
+            transform: scale(0);
+            opacity: 0.5;
+            transition: all 250ms ease-in-out;
+        }
+
+        input:checked + .fa-heart {
+
+            &::before {
+            opacity: 0;
+            }
+
+            &::after {
+            transform: scale(1);
+            opacity: 1;
+            }
+        }
+    }
+
+    &__url {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+}
+
+
+// Responsive Mixin
+@mixin card--md() {
+    .restaurants {
+        @include flex-grid(2);
+    }
+}
+
+@mixin card--xl() {
+    .restaurants {
+        @include flex-grid(4);
+    }
+    .card {
+        img {
+            height: 330px; 
+        }
+        .card__img {
+            height: 330px;
+        }
+    }
+}

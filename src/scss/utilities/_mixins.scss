@@ -1,0 +1,34 @@
+// Add fa icon with cheatsheet 
+@mixin content-icon($weight, $color, $scaleX, $scaleY, $code) {
+    display: flex;
+    font-family: "Font Awesome 5 Free";
+    color: $color;
+    transform: scale($scaleX, $scaleY);
+    font-weight: $weight;
+    content: $code;
+}
+
+// Circle border
+@mixin circle-border($pixel) {
+    border-radius: 50%;
+    width: $pixel;
+    height: $pixel;
+}
+
+// Move element with transform
+@mixin transform-center($top, $x, $y) {
+    top: $top;
+    transform: translate($x, $y);
+}
+
+// Center element with flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Set $string = inset for inner box shadow
+@mixin box-shadow($string, $shift-right, $shift-down, $blur, $spread, $opacity) {
+    box-shadow: add-string($string) $shift-right $shift-down $blur $spread rgba(0,0,0,$opacity);
+}

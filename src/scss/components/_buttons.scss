@@ -1,6 +1,3 @@
-@import '../utilities/colors';
-@import '../utilities/borders';
-
 @mixin btn($width) {
     border: none;
     background: $gradient;

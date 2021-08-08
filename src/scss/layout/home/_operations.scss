@@ -1,0 +1,130 @@
+$op-icons: 
+    "__mobile" "\f3cd" 1.25 1.2 #7e7e7e, 
+    "__list" "\f0ca" 1 1.2 #7e7e7e, 
+    "__store" "\f54e" 0.9 1.1 #7e7e7e;
+
+.op {
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+    &__title {
+        width: 100%;
+        padding: 0 0 30px 0;
+        font-size: 1.40em;
+        font-weight: 600;
+    }
+
+    ol {
+        left: 12px;
+    }
+
+    li {
+        counter-increment: incrementation;
+    }
+
+    &__ol {
+        display: flex;
+        align-items: baseline; 
+        background: $grey;
+        border-radius: 18px;
+        position: relative;
+        height: 72px;
+        @include box-shadow('', 0px, 5px, 10px, -2px, 0.25);      
+    }
+
+    &__ol:hover {
+        background: $lighten-primary-color;
+        span:nth-of-type(1)::before {
+            color: $primary-color;
+        }
+    }
+
+    &__ol::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: counter(incrementation);
+        @include transform-center(50%, 0, -50%);
+        @include circle-border(24px);
+        font-size: 0.8em;
+        color: white;
+        position: absolute;
+        left: -12px;
+        background: $primary-color;
+
+    }
+
+    span:nth-of-type(1) {
+        width: 25%;
+        height: 100%;
+    }
+
+    span:nth-of-type(2) {
+        display: block;
+        font-size: 1em;
+        font-size: 0.98em;
+        font-weight: 500;
+    }
+    
+    @each $name, $icon, $icon-scaleX, $icon-scaleY, $icon-color in $op-icons {
+        &#{$name}::before {
+            @include content-icon(900, $icon-color, $icon-scaleX, $icon-scaleY, $icon);
+            @include flex-center;
+            width: 100%;
+            height: 100%;
+        }
+      }
+
+}
+
+
+// Responsive Mixin
+@mixin op--sm() {
+    .op {
+        
+        li {
+            margin-left: 12px;
+            padding-right: calc(12px * 1.5);
+        }
+
+    }
+}
+
+@mixin op--md() {
+    .op {
+        @include flex-grid(3);
+        &__ol {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__ol::before {
+            @include circle-border(30px);
+            top: 0;
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        span:nth-of-type(1) {
+            position: absolute;
+            left: 0;
+        }
+        span:nth-of-type(2) {
+            padding-right: 20%;
+            padding-left: 20%;
+            text-align: center;
+        }
+    }
+}
+
+@mixin op--xl() {
+    .op {
+
+        &__ol {
+            height: 80px;
+        }
+
+    }
+}
