@@ -1,0 +1,8 @@
+@function add-string($string) {
+    @if $string != '' {
+        @return $string;
+    }
+    @else {
+        @return null;
+    }
+}

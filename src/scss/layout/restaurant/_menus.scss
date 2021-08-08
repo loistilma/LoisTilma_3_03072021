@@ -1,17 +1,51 @@
+.restaurant {
+    padding-top: 35px;
+    padding-bottom: 85px;
+    border-radius: 40px 40px 0 0;
+    background: $grey;
+
+    h3 {
+        font-size: 1em;
+        font-weight: 300;
+        position: relative;
+        padding-bottom: 7px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        @include btn(170px);
+        font-weight: 600;
+    }
+
+}
+
+.restaurant__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 40px;
+
+    h2 {
+        font-size: 1.6em;
+        font-weight: 400;
+    }
+}
+
 .menu {
     opacity: 0;
     margin-bottom: 40px;
+    &__title::before {
+        content: "";
+        border: 2px solid $tertiary-color;
+        position: absolute;
+        bottom: 0;
+        width: 35px;
+    }    
 }
 
-.dish--border::before {
-    content: "";
-    border: 2px solid $green;
-    position: absolute;
-    bottom: 0;
-    width: 35px;
-}
 
-.dish__box {
+
+.menu__box {
     opacity: 0;
     display: flex;
     position: relative;
@@ -40,10 +74,6 @@
         width: 68px;
     }
 
-    /*input:hover + label {
-        width: 68px;
-    }*/
-
     input:checked + label .fa-check  {
         transition: 0.5s;
         transform: translate(0, 100%) rotate(1turn);
@@ -51,7 +81,7 @@
 
 }
 
-.dish__desc {
+.menu__desc {
     display: flex;
     flex-flow: column;
     flex: 1;
@@ -63,7 +93,7 @@
         font-size: 1em;
         font-weight: 600;
         overflow: hidden;
-        text-overflow: "…";
+        text-overflow: ellipsis;
         white-space: nowrap;
         line-height: 20px;
     }
@@ -72,13 +102,13 @@
         font-size: 0.9em;
         font-weight: 300;
         overflow: hidden;
-        text-overflow: "…";
+        text-overflow: ellipsis;
         white-space: nowrap;
         line-height: 20px;
     }    
 }
 
-.dish__price {
+.menu__price {
     align-self: flex-end;
     margin-bottom: 14px;
     font-size: 0.9em;
@@ -106,14 +136,14 @@
 
         .order__check {
             display: block;
-            background: $green;
+            background: $tertiary-color;
             height: 100%;
             text-align: center;
         }
 
         .fa-check {
             background: white;
-            color: $green;
+            color: $tertiary-color;
             @include transform-center(50%, 0, 100%);
             @include circle-border(24px);
             line-height: 24px;
@@ -150,19 +180,10 @@
     70%, 100%{transform: translate3d(0,0,0); opacity: 1;}
 }
 
-@mixin menu--sm() {
-    .menu {
 
-    }
-}
-@mixin menu--md() {
-    .menu {
-
-    }
-}
-
+// Responsive Mixin
 @mixin menu--xl() {
-    .menu {
-
+    .restaurant {
+        @include flex-grid(3);
     }
 }

@@ -1,17 +1,13 @@
-@import '../layout/intro';
-@import '../layout/menus';
-@import '../layout/dishes';
+@import '../layout/restaurant/images';
+@import '../layout/restaurant/menus';
 
-@include for-size(phone-only) {
-    @include menu--sm();
-}
 
+// Breakpoint 
 @include for-size(tablet-portrait-up) {
-    @include container--md();
-    @include restaurant--md();
-    @include menu--md();
+    @include container--md;
 }
 
 @include for-size(desktop-up) {
-    @include container--xl();
+    @include container--xl;
+    @include menu--xl;
 }

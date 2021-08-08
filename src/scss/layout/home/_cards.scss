@@ -28,8 +28,8 @@
         height: 29px;
         width: 79px;
         border-radius: 2px;
-        background-color: $green;
-        color: $dark-green;
+        background-color: $tertiary-color;
+        color: $darken-tertiary-color;
         top: 0;
         right: 0;        
         position: absolute;
@@ -91,19 +91,19 @@
             font-size: 25px;
             font-weight: 400;
             opacity: 1;
-            transition: all 250ms ease-in-out;
+            transition: opacity 250ms ease-in-out;
         }
         .fa-heart::after {
             content: "\f004";
             -webkit-background-clip: text;
-            background-clip: text;
+            //background-clip: text;
             color: transparent; 
             font-weight: 900; 
             background-image: $invert-gradient;
             position: absolute;
             right: 0;
             transform: scale(0);
-            opacity: 0.3;
+            opacity: 0.5;
             transition: all 250ms ease-in-out;
         }
 
@@ -131,6 +131,8 @@
 
 }
 
+
+// Responsive Mixin
 @mixin card--md() {
     .restaurants {
         @include flex-grid(2);

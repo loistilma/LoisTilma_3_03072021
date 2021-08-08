@@ -1,0 +1,17 @@
+// Color variables
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$lighten-primary-color: #f5edff;
+$tertiary-color: #99E2D0;
+$darken-tertiary-color: #008766;
+$grey: #f6f6f6;
+$light-black: #353535;
+
+$gradient: linear-gradient(175deg, $secondary-color 20%, $primary-color 100%);
+$invert-gradient: linear-gradient(360deg, $secondary-color 20%, $primary-color 100%);
+$lighten-gradient: linear-gradient(175deg, lighten($secondary-color, 2.5%) 20%, lighten($primary-color, 2.5%) 100%);
+
+// Border variables
+$rounded-border : 15px;
+$rounded-top : 15px 15px 0 0;
+$rounded-bottom : 0 0 15px 15px;

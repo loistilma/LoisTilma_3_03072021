@@ -1,7 +1,5 @@
 @charset "UTF-8";
 /* Include base */
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .container {
   width: 100%;
   padding-right: 1.5rem;
@@ -78,9 +76,10 @@ h4 {
   font-weight: 500;
 }
 
+/* Include components */
 /* Include utilities */
-/* Include pages */
-.header {
+/* Include base layout*/
+.logo {
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,14 +89,14 @@ h4 {
           align-items: center;
 }
 
-.header__title {
+.logo__text {
   color: black;
   text-align: center;
   position: relative;
   font-size: 1.8em;
 }
 
-.header__back {
+.logo__back {
   position: absolute;
   font-size: 1.2em;
   color: #353535;
@@ -186,6 +185,7 @@ footer li:not(:first-of-type):not(:nth-of-type(2)) {
   text-align: inherit;
 }
 
+/* Include pages */
 body {
   position: relative;
 }
@@ -210,35 +210,9 @@ body {
   background: black;
   opacity: 0.8;
   z-index: 99;
-  /*
-    span:nth-of-type(1) {
-        animation: borderspin-1 1.5s linear infinite;
-        display: block;        
-        position: absolute;
-        border-top: 5px solid $pink;
-        top: 50%;
-        left: 50%;
-    }
-    span:nth-of-type(2) {
-        animation: borderspin-2 1.5s linear infinite;
-        display: block;        
-        position: absolute;
-        border-top: 5px solid $purple;
-        top: 50%;
-        left: 50%;
-    }
-    span:nth-of-type(3) {
-        animation: borderspin-3 1.5s linear infinite;
-        display: block;        
-        position: absolute;
-        border-top: 5px solid $green;
-        top: 50%;
-        left: 50%;
-    }
-*/
 }
 
-.loading span:nth-of-type(1) {
+.loading__border:nth-of-type(1) {
   -webkit-animation: borderspin-1 1.5s linear infinite;
           animation: borderspin-1 1.5s linear infinite;
   border-radius: 50%;
@@ -251,7 +225,7 @@ body {
   left: 50%;
 }
 
-.loading span:nth-of-type(2) {
+.loading__border:nth-of-type(2) {
   -webkit-animation: borderspin-2 1.5s linear infinite;
           animation: borderspin-2 1.5s linear infinite;
   border-radius: 50%;
@@ -264,7 +238,7 @@ body {
   left: 50%;
 }
 
-.loading span:nth-of-type(3) {
+.loading__border:nth-of-type(3) {
   -webkit-animation: borderspin-3 1.5s linear infinite;
           animation: borderspin-3 1.5s linear infinite;
   border-radius: 50%;
@@ -288,93 +262,117 @@ body {
           transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.loading svg {
+.loading .loading__logo {
   width: 100%;
   height: 100%;
   position: relative;
-  vertical-align: middle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.loading svg path:nth-of-type(1) {
-  fill: black;
+.loading .loading__logo span:nth-of-type(1) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 0ms;
+  -webkit-animation-delay: 0ms;
 }
 
-.loading svg path:nth-of-type(2) {
-  fill: black;
+.loading .loading__logo span:nth-of-type(2) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 80ms;
+  -webkit-animation-delay: 80ms;
 }
 
-.loading svg path:nth-of-type(3) {
-  fill: black;
+.loading .loading__logo span:nth-of-type(3) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 160ms;
+  -webkit-animation-delay: 160ms;
 }
 
-.loading svg path:nth-of-type(4) {
-  fill: black;
+.loading .loading__logo span:nth-of-type(4) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 240ms;
+  -webkit-animation-delay: 240ms;
+}
+
+.loading .loading__logo span:nth-of-type(5) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 320ms;
+  -webkit-animation-delay: 320ms;
+}
+
+.loading .loading__logo span:nth-of-type(6) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 400ms;
   -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
 }
 
-.loading svg path:nth-of-type(5) {
-  fill: black;
+.loading .loading__logo span:nth-of-type(7) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 480ms;
+  -webkit-animation-delay: 480ms;
 }
 
-.loading svg path:nth-of-type(6) {
-  fill: black;
+.loading .loading__logo span:nth-of-type(8) {
+  font-size: 1.7em;
+  display: inline-block;
+  color: white;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-}
-
-.loading svg path:nth-of-type(7) {
-  fill: black;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
-  -webkit-animation-delay: 700ms;
-          animation-delay: 700ms;
-}
-
-.loading svg path:nth-of-type(8) {
-  fill: black;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: color 3s linear infinite;
-          animation: color 3s linear infinite;
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
+  animation: bound 640ms linear infinite;
+  -webkit-animation: bound 640ms linear infinite;
+  animation-delay: 560ms;
+  -webkit-animation-delay: 560ms;
 }
 
 @-webkit-keyframes borderspin-1 {
@@ -443,27 +441,31 @@ body {
   }
 }
 
-@-webkit-keyframes color {
-  0%, 5%, 50%, 60%, 100% {
-    fill: #9356DC;
+/*
+@keyframes color{
+    0%, 5%, 50%, 60%, 100%{color: $primary-color;}
+    10%, 20%, 65%, 70%{color: $secondary-color;}
+    30%, 40%, 80%, 90%{color: $tertiary-color;}
+}
+*/
+@-webkit-keyframes bound {
+  from {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
   }
-  10%, 20%, 65%, 70% {
-    fill: #FF79DA;
-  }
-  30%, 40%, 80%, 90% {
-    fill: #99E2D0;
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
-
-@keyframes color {
-  0%, 5%, 50%, 60%, 100% {
-    fill: #9356DC;
+@keyframes bound {
+  from {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
   }
-  10%, 20%, 65%, 70% {
-    fill: #FF79DA;
-  }
-  30%, 40%, 80%, 90% {
-    fill: #99E2D0;
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -612,8 +614,12 @@ body {
           box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
 }
 
-li:last-of-type > .op__ol {
+.op__ol:hover {
   background: #f5edff;
+}
+
+.op__ol:hover span:nth-of-type(1)::before {
+  color: #9356DC;
 }
 
 .op__ol::before {
@@ -699,7 +705,7 @@ li:last-of-type > .op__ol {
   display: -ms-flexbox;
   display: flex;
   font-family: "Font Awesome 5 Free";
-  color: #9356DC;
+  color: #7e7e7e;
   -webkit-transform: scale(0.9, 1.1);
           transform: scale(0.9, 1.1);
   font-weight: 900;
@@ -837,14 +843,13 @@ li:last-of-type > .op__ol {
   font-size: 25px;
   font-weight: 400;
   opacity: 1;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
 }
 
 .card__like .fa-heart::after {
   content: "\f004";
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
   font-weight: 900;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #FF79DA), to(#9356DC));
@@ -853,7 +858,7 @@ li:last-of-type > .op__ol {
   right: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
-  opacity: 0.3;
+  opacity: 0.5;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
@@ -1068,7 +1073,7 @@ li:last-of-type > .op__ol {
   margin-bottom: 40px;
 }
 
-.dish--border::before {
+.menu__title::before {
   content: "";
   border: 2px solid #99E2D0;
   position: absolute;
@@ -1076,7 +1081,7 @@ li:last-of-type > .op__ol {
   width: 35px;
 }
 
-.dish__box {
+.menu__box {
   opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1088,16 +1093,13 @@ li:last-of-type > .op__ol {
   overflow: hidden;
   -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.25);
-  /*input:hover + label {
-        width: 68px;
-    }*/
 }
 
-.dish__box:not(:last-of-type) {
+.menu__box:not(:last-of-type) {
   margin-bottom: 15px;
 }
 
-.dish__box input {
+.menu__box input {
   position: absolute;
   opacity: 0;
   width: 100%;
@@ -1107,20 +1109,20 @@ li:last-of-type > .op__ol {
   z-index: 1;
 }
 
-.dish__box input:checked + label {
+.menu__box input:checked + label {
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
   width: 68px;
 }
 
-.dish__box input:checked + label .fa-check {
+.menu__box input:checked + label .fa-check {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: translate(0, 100%) rotate(1turn);
           transform: translate(0, 100%) rotate(1turn);
 }
 
-.dish__desc {
+.menu__desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1135,27 +1137,27 @@ li:last-of-type > .op__ol {
   padding: 14px 0 14px 12px;
 }
 
-.dish__desc p:nth-of-type(1) {
+.menu__desc p:nth-of-type(1) {
   height: 20px;
   font-size: 1em;
   font-weight: 600;
   overflow: hidden;
-  text-overflow: "…";
+  text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 20px;
 }
 
-.dish__desc p:nth-of-type(2) {
+.menu__desc p:nth-of-type(2) {
   height: 20px;
   font-size: 0.9em;
   font-weight: 300;
   overflow: hidden;
-  text-overflow: "…";
+  text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 20px;
 }
 
-.dish__price {
+.menu__price {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 14px;
@@ -1326,25 +1328,21 @@ li:last-of-type > .op__ol {
   .container {
     width: 85%;
   }
-  /*
-    .restaurant {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        &__title {
-            flex: 100%;
-            justify-content: center;
-        }
-        &__like {
-            margin-left: 20px;
-        }
-    }
-*/
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 90%;
+  }
+  .restaurant .grid-3 > * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: calc(100% / 3);
+    padding-right: calc(1em * .5);
+    padding-left: calc(1em * .5);
+    padding-top: calc(1em * .5);
+    padding-bottom: calc(1em * .5);
   }
 }
 /*# sourceMappingURL=index.css.map */
