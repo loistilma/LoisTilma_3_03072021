@@ -510,20 +510,26 @@ body {
     .card__like input {
       display: none; }
     .card__like .fa-heart {
+      width: 26px;
       font-size: 25px;
-      font-weight: 400; }
+      font-weight: 400;
+      text-align: center; }
     .card__like .fa-heart::before {
-      font-size: 25px;
+      display: block;
+      width: 26px;
       font-weight: 400;
       opacity: 1;
       transition: opacity 250ms ease-in-out; }
     .card__like .fa-heart::after {
+      display: block;
+      width: 26px;
       content: "\f004";
       -webkit-background-clip: text;
       color: transparent;
       font-weight: 900;
       background-image: linear-gradient(360deg, #FF79DA 20%, #9356DC 100%);
       position: absolute;
+      top: 0;
       right: 0;
       transform: scale(0);
       opacity: 0.5;

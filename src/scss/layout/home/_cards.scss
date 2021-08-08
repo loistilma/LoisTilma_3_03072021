@@ -84,16 +84,21 @@
         }
 
         .fa-heart {
+            width: 26px;
             font-size: 25px;
             font-weight: 400;
+            text-align: center;
         }
         .fa-heart::before {
-            font-size: 25px;
+            display: block;
+            width: 26px;
             font-weight: 400;
             opacity: 1;
             transition: opacity 250ms ease-in-out;
         }
         .fa-heart::after {
+            display: block;
+            width: 26px;
             content: "\f004";
             -webkit-background-clip: text;
             //background-clip: text;
@@ -101,6 +106,7 @@
             font-weight: 900; 
             background-image: $invert-gradient;
             position: absolute;
+            top: 0;
             right: 0;
             transform: scale(0);
             opacity: 0.5;
