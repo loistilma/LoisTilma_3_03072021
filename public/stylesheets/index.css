@@ -835,12 +835,15 @@ body {
 }
 
 .card__like .fa-heart {
+  width: 26px;
   font-size: 25px;
   font-weight: 400;
+  text-align: center;
 }
 
 .card__like .fa-heart::before {
-  font-size: 25px;
+  display: block;
+  width: 26px;
   font-weight: 400;
   opacity: 1;
   -webkit-transition: opacity 250ms ease-in-out;
@@ -848,6 +851,8 @@ body {
 }
 
 .card__like .fa-heart::after {
+  display: block;
+  width: 26px;
   content: "\f004";
   -webkit-background-clip: text;
   color: transparent;
@@ -855,6 +860,7 @@ body {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #FF79DA), to(#9356DC));
   background-image: linear-gradient(360deg, #FF79DA 20%, #9356DC 100%);
   position: absolute;
+  top: 0;
   right: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
