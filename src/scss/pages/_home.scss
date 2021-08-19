@@ -3,21 +3,3 @@
 @import '../layout/home/descriptions';
 @import '../layout/home/operations';
 @import '../layout/home/cards';
-
-// Breakpoint 
-@include for-size(phone-only) {
-    @include op--sm();
-}
-
-@include for-size(tablet-portrait-up) {
-    @include container--md;
-    @include op--md;
-    @include card--md;
-    @include footer--md;    
-}
-
-@include for-size(desktop-up) {
-    @include container--xl;
-    @include op--xl;
-    @include card--xl;
-}

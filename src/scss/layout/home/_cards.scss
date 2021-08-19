@@ -136,25 +136,3 @@
     }
 
 }
-
-
-// Responsive Mixin
-@mixin card--md() {
-    .restaurants {
-        @include flex-grid(2);
-    }
-}
-
-@mixin card--xl() {
-    .restaurants {
-        @include flex-grid(4);
-    }
-    .card {
-        img {
-            height: 330px; 
-        }
-        .card__img {
-            height: 330px;
-        }
-    }
-}
