@@ -1,15 +1,16 @@
+/* Include utilities */
+@import 'utilities/functions';
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
 /* Include base */
-@import 'base/responsive';
 @import 'base/reset';
 @import 'base/typography';
 
 /* Include components */
 @import 'components/buttons';
 
-/* Include utilities */
-@import 'utilities/functions';
-@import 'utilities/variables';
-@import 'utilities/mixins';
+
 
 /* Include base layout*/
 @import 'layout/header';
@@ -18,3 +19,6 @@
 /* Include pages */
 @import 'pages/home';
 @import 'pages/restaurant';
+
+/* Breakpoint */
+@import 'base/responsive';

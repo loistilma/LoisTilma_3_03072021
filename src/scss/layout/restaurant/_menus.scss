@@ -179,11 +179,3 @@
     0%{transform: translate3d(0,30px,0); opacity: 0;}
     70%, 100%{transform: translate3d(0,0,0); opacity: 1;}
 }
-
-
-// Responsive Mixin
-@mixin menu--xl() {
-    .restaurant {
-        @include flex-grid(3);
-    }
-}
