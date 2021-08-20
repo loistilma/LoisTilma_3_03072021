@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* Include utilities */
 /* Include base */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -32,12 +34,26 @@ ul, ol, li {
   list-style: none;
 }
 
+body > * > *, .restaurant > *, .loading__logo {
+  animation: let-fonts-load 1s linear forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes let-fonts-load {
+  from, 20% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body:not(header):not(.footer__title) {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', swap, sans-serif;
 }
 
 header, .footer__title, .restaurant__title {
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Shrikhand', swap, cursive;
 }
 
 h4 {
@@ -66,10 +82,13 @@ h4 {
   color: #353535;
   width: 1em;
   z-index: 1;
+  left: 0;
 }
 
-header > .container > .grid-1 {
+header > .container > .item {
+  display: flex;
   position: relative;
+  justify-content: center;
   align-items: center;
 }
 

@@ -2,18 +2,25 @@ extends layout
 block before-header
   div(class='loading')
       div(class='loading__box')
-            span(class='loading__border')
-            span(class='loading__border')
-            span(class='loading__border')
-            div(class='loading__logo')
-              span o
-              span h
-              span m 
-              span y 
-              span f 
-              span o 
-              span o 
-              span d
+        span(class='loading__border')
+        span(class='loading__border')
+        span(class='loading__border')
+        div(class='loading__logo')
+          span o
+          span h
+
+          span m 
+          span y 
+
+          span f 
+          span o 
+          span o 
+          span d
+block header
+  header(class='logo')
+    nav(class='container')
+      div(class='item')
+        h1(class='logo__text')= title
 block content
   div(class='place')
     div(class='container')

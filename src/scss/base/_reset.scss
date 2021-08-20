@@ -29,3 +29,14 @@ ul, ol, li {
     list-style: none;
 }
 
+
+body > * > *, .restaurant > *, .loading__logo {
+    animation: let-fonts-load 1s linear forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes let-fonts-load {
+    from, 20%{opacity: 0;}
+    
+    to{opacity: 1;}
+}
