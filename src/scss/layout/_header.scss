@@ -16,10 +16,13 @@
         color: $light-black;
         width: 1em;
         z-index: 1;
+        left: 0;
     }
 }
 
-header > .container > .grid-1 {
+header > .container > .item {
+    display: flex;
     position: relative;
+    justify-content: center;
     align-items: center;
 }
